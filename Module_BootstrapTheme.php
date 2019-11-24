@@ -8,7 +8,7 @@ final class Module_BootstrapTheme extends GDO_Module
 {
 	public function getThemes() { return ['bootstrap']; }
 
-	public function getDependencies() { return ['Bootstrap', 'FontAwesome']; }
+	public function getDependencies() { return ['Bootstrap', 'FontAwesome', 'Moment']; }
 	
 	public function onIncludeScripts()
 	{
@@ -16,6 +16,9 @@ final class Module_BootstrapTheme extends GDO_Module
 		
 		$this->addBowerCSS("bootstrap-slider/dist/css/bootstrap-slider$min.css");
 		$this->addBowerJavascript("bootstrap-slider/dist/bootstrap-slider$min.js");
+		
+		$this->addBowerCSS("pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker$min.css");
+		$this->addBowerJavascript("pc-bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min.js");
 		
 		$this->addCSS("css/gdo-bootstrap-theme-sidebar.css");
 		$this->addCSS("css/gdo-bootstrap-theme-gdo.css");

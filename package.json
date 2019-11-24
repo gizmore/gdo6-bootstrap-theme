@@ -7,6 +7,7 @@
   "author": "gizmore",
   "license": "MIT",
   "dependencies": {
-    "bootstrap-slider": "^10.6.2"
+    "bootstrap-slider": "^10.6.2",
+    "pc-bootstrap4-datetimepicker": "^4.17.50"
   }
 }
