@@ -1,0 +1,49 @@
+.d-flex > * {
+	flex: 1 0 auto;
+}
+
+footer p {
+	margin: 0;
+}
+
+.gdt-button {
+	padding: 0;
+}
+.gdt-button > a {
+	color: inherit;
+	display: block;
+	padding: 0.375rem 0.75rem;
+	line-height: 18px;
+}
+.gdt-button > a:HOVER {
+	text-decoration: none;
+}
+
+.gdt-bar-row {
+	align-items: center;
+	justify-content: center;
+}
+
+.gdt-bar-row > * {
+	text-align: center;
+	margin: 2px 8px;
+}
+
+.gdt-form {
+	padding: 16px;
+	border: solid #f7f7f9;
+    border-width: .2rem;
+    margin-bottom: 16px;
+}
+
+.gdo-form-error {
+	padding: 2px 8px;
+	background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+}
+
+.gdo-profile-link span {
+    display: inline-block;
+    vertical-align: inherit!important;
+}
