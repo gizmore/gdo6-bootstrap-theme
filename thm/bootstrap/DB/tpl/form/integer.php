@@ -3,6 +3,7 @@
   <?=$field->htmlIcon()?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input
+   class="form-control"
    type="number"
    name="form[<?= $field->name; ?>]"
    <?= $field->htmlDisabled(); ?>

@@ -7,6 +7,7 @@ $field instanceof GDT_Email;
   <?=$field->htmlIcon()?>
   <label for="form[<?= $field->name; ?>]"><?=$field->displayLabel()?></label>
   <input
+   class="form-control"
    type="email"
    name="form[<?= $field->name; ?>]"
    value="<?= $field->displayVar(); ?>"

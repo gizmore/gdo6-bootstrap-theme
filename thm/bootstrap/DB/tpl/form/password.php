@@ -4,6 +4,7 @@
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input
    type="password"
+   class="form-control"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlPattern(); ?>
    min="<?= $field->min; ?>"

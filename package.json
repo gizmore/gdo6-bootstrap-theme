@@ -1,0 +1,12 @@
+{
+  "name": "gdo6-bootstrap-theme",
+  "version": "6.09",
+  "description": "Bootstrap4 Theme for GDO6",
+  "main": "Module_BootstrapTheme.php",
+  "repository": "ssh://git@github.com/gizmore/gdo6-bootstrap-theme",
+  "author": "gizmore",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-slider": "^10.6.2"
+  }
+}

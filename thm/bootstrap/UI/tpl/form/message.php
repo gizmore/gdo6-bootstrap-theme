@@ -4,7 +4,7 @@
   <?= $field->htmlIcon(); ?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <textarea
-   novalidate
+   novalidate="novalidate"
    class="<?=$field->classEditor()?> form-control"
    name="form[<?= $field->name; ?>]"
    rows="6"
