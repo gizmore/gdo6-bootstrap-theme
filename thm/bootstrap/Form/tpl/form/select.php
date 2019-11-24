@@ -3,15 +3,19 @@
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
   <select
-   class="form-control"
 <?php if ($field->multiple) : ?>
+   name="form[<?=$field->name?>][]"
    multiple="multiple"
+<?php else : ?>
+   name="form[<?=$field->name?>]"
 <?php endif; ?>
    <?= $field->htmlRequired(); ?>
-   <?= $field->htmlDisabled(); ?>>
-   name="form[<?= $field->name?>]">
+   <?= $field->htmlDisabled(); ?>
+   class="form-control">
 	<?php foreach ($field->choices as $value => $choice) : ?>
-	  <option value="<?= htmlspecialchars($value); ?>">
+	  <option
+       <?=$field->htmlSelected($value)?>	   
+	   value="<?= htmlspecialchars($value); ?>">
 		<?= $field->renderChoice($choice); ?>
 	  </option>
 	<?php endforeach; ?>
