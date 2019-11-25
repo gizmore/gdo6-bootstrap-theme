@@ -1,5 +1,5 @@
 <?php /** @var $field \GDO\DB\GDT_Decimal **/ ?>
-<div class="form-group gdt-decimal <?=$field->classError()?>">
+<div class="form-group <?=$field->classError()?>">
   <?=$field->htmlTooltip()?>
   <?= $field->htmlIcon(); ?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>

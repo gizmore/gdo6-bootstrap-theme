@@ -20,7 +20,10 @@ final class Module_BootstrapTheme extends GDO_Module
 		$this->addBowerCSS("pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker$min.css");
 		$this->addBowerJavascript("pc-bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min.js");
 		
+		$this->addBowerJavascript("autocomplete.js/dist/autocomplete.jquery$min.js");
+		
 		$this->addCSS("css/gdo-bootstrap-theme-sidebar.css");
+		$this->addCSS("css/gdo-bootstrap-theme-autocomplete.css");
 		$this->addCSS("css/gdo-bootstrap-theme-gdo.css");
 		$this->addJavascript("js/gdo-bootstrap-theme.js");
 	}
