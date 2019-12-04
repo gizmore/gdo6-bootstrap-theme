@@ -24,8 +24,10 @@ use GDO\Profile\GDT_ProfileLink;
     </p>
   </div>
 
+<?php if ($field->getActions()) : ?>
   <div class="actions">
 	<?=$field->getActions()->render()?>
   </div>
+<?php endif; ?>
 
 </div>
