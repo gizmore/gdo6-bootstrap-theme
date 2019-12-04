@@ -4,9 +4,9 @@
   <label><?= $field->displayLabel(); ?></label>
   <select
    class="form-control"
+   name="form[<?= $field->name?>]">
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
-   name="form[<?= $field->name?>]">
 	<?php if ($field->emptyLabel) : ?>
 	  <option value="<?= $field->emptyValue; ?>"><?= $field->emptyLabel; ?></option>
 	<?php endif; ?>

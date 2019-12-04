@@ -23,8 +23,6 @@ use GDO\UI\GDT_Icon;
        </div>
       <?= GDT_Bar::make()->vertical()->yieldHook('LeftBar'); ?>
       <hr/>
-      <?=GDT_Bar::make()->vertical()->yieldHook('RecalcoloBar')?>
-      <hr/>
       <?= GDT_Bar::make()->vertical()->yieldHook('RightBar'); ?>
     </nav>
   
