@@ -19,7 +19,7 @@ use GDO\Profile\GDT_ProfileLink;
   <div class="card-body text-primary">
     <p class="card-text">
 <?php foreach ($field->getFields() as $gdt) : ?>
-	<?=$gdt->render()?>
+	<?=$gdt->renderCard()?>
 <?php endforeach; ?>
     </p>
   </div>
