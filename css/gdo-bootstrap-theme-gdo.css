@@ -48,6 +48,20 @@ footer p {
     vertical-align: inherit!important;
 }
 
+.gdt-dashboard .gdo-gdt_link {
+	width: 160px;
+	text-align: center;
+	background: aliceblue;
+	height: 160px;
+	vertical-align: middle;
+	margin-bottom: 4px;
+}
+
+.gdt-dashboard .gdo-gdt_link a {
+	height: 160px;
+	vertical-align: middle;
+}
+
 /** Navbar **/
 /* .dropdown-item {  */
 /*   width: max-content !important; */
