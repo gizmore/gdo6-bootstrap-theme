@@ -8,10 +8,18 @@
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
 	<?php if ($field->emptyLabel) : ?>
-	  <option value="<?= $field->emptyValue; ?>"><?= $field->emptyLabel; ?></option>
+	  <option
+	  <?=$field->htmlSelected($field->emptyValue);?>
+	   value="<?= $field->emptyValue; ?>">
+	    <?= $field->emptyLabel; ?>
+	  </option>
 	<?php endif; ?>
 	<?php foreach ($field->enumValues as $enumValue) : ?>
-	  <option value="<?= $enumValue; ?>"><?= t('enum_'.$enumValue); ?></option>
+	  <option
+	   <?=$field->htmlSelected($enumValue);?>
+	   value="<?= $enumValue; ?>">
+	    <?= t('enum_'.$enumValue); ?>
+	  </option>
 	<?php endforeach; ?>
   </select>
   <?=$field->htmlError()?>
