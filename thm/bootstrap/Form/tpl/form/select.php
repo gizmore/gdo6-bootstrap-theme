@@ -1,8 +1,4 @@
 <?php /** @var $field \GDO\Form\GDT_Select **/ ?>
-<?php 
-var_dump($field->getVar());
-
-?>
 <div class="form-group <?=$field->htmlClass()?>">
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
