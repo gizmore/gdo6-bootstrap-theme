@@ -1,16 +1,18 @@
 <?php
-use GDO\DB\GDT_Object;
-$field instanceof GDT_Object;
+/** @var $field \GDO\DB\GDT_Object **/
 ?>
-<md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex>
+<div
+ class="form-group <?=$field->classError()?>">
+  <?=$field->htmlTooltip()?>
+  <?=$field->htmlIcon()?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
-  <?= $field->htmlIcon(); ?>
   <input
+   class="form-control"
    type="number"
    step="1"
    name="form[<?= $field->name; ?>]"
-   value="<?= $field->displayVar(); ?>"
-   <?= $field->htmlRequired(); ?>
-   <?= $field->htmlDisabled(); ?>/>
-  <div class="gdo-form-error"><?= $field->error; ?></div>
-</md-input-container>
+   <?=$field->htmlDisabled()?>
+   <?=$field->htmlRequired()?>
+   value="<?=$field->displayVar()?>" />
+  <?= $field->htmlError(); ?>
+</div>

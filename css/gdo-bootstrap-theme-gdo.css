@@ -65,3 +65,12 @@ footer p {
 .gdo-tblorder a.sel {
 	color: orange;
 }
+
+.gdo-form-error {
+	color: #111;
+}
+
+.gdt-divider {
+	padding-bottom: 4px;
+	border-bottom: 1px solid #111;
+}
