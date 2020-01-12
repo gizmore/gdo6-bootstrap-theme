@@ -11,7 +11,7 @@
 	  <option
 	  <?=$field->htmlSelected($field->emptyValue);?>
 	   value="<?= $field->emptyValue; ?>">
-	    <?= $field->emptyLabel; ?>
+	    <?= $field->displayEmptyLabel(); ?>
 	  </option>
 	<?php endif; ?>
 	<?php foreach ($field->enumValues as $enumValue) : ?>

@@ -17,7 +17,7 @@
      <?=$field->htmlSelected(null)?>	   
      <?=$field->htmlSelected($field->emptyValue)?>	   
      value="<?=$field->emptyValue?>">
-     <?=$field->emptyLabel?>
+     <?=$field->displayEmptyLabel()?>
     </option>
     <?php endif; ?>
 	<?php foreach ($field->choices as $value => $choice) : ?>
