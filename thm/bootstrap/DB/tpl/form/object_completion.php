@@ -13,7 +13,7 @@
    name="form[<?= $field->name; ?>]"
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=$field->getVar()?>" />
+   value="<?=$field->displayVar()?>" />
   <input type="hidden" name="nocompletion_<?=$field->name?>" value="1" />
   <?= $field->htmlError(); ?>
 </div>
