@@ -10,8 +10,11 @@ use GDO\Profile\GDT_ProfileLink;
 
   <div class="card-header">
 <?php if ($field->withCreator) : ?>
-	<md-card-avatar><?=GDT_ProfileLink::make()->forUser($field->gdoCreator())->render()?></md-card-avatar>
-<?php endif; ?>  
+	<span class="card-creator"><?=GDT_ProfileLink::make()->withNickname()->forUser($field->gdoCreator())->renderCell()?></span>
+<?php endif; ?>
+<?php if ($field->withCreated) : ?>
+    <span class="card-created"><?=$field->displayCreated()?></span>
+<?php endif; ?>
     <h4><?=$field->title?></h4>
     <h5><?=$field->subtitle?></h5>
   </div>
