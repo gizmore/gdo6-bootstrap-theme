@@ -135,4 +135,7 @@ $(function() {
 		$(".page-wrapper").addClass("toggled");
 	}
 	
+	// Visible
+	$('.page-wrapper').removeClass('n');
+	
 });

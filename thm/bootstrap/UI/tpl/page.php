@@ -19,7 +19,7 @@ $user = GDO_User::current();
 </head>
 <body>
 
-<div class="page-wrapper chiller-theme">
+<div class="page-wrapper chiller-theme n">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
   </a>
