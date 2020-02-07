@@ -2,8 +2,29 @@
 use GDO\Table\GDT_List;
 use GDO\UI\GDT_Icon;
 use GDO\Util\Common;
+
+/** @var $field GDT_List **/
 $field instanceof GDT_List;
 ?>
+<div class="list-group">
+<?php if ($field->title) : ?>
+  <div class="list-group-item"><?=html($field->title)?></div>
+<?php endif; ?>
+<?php
+$pagemenu = $field->getPageMenu();
+echo $pagemenu ? $pagemenu->renderCell() : null;
+$result = $field->getResult();
+$template = $field->getItemTemplate();
+while ($gdo = $result->fetchObject()) :
+	echo $template->gdo($gdo)->renderList();
+endwhile;
+echo $pagemenu ? $pagemenu->renderCell() : null;
+?>
+</div>
+
+
+
+<?php return; ?>
 <!-- List -->
 <md-list flex layout="column" layout-fill>
 <?php if ($field->title) : ?>

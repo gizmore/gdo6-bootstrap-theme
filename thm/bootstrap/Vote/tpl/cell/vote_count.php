@@ -2,12 +2,14 @@
 use GDO\UI\GDT_Badge;
 use GDO\UI\GDT_Tooltip;
 use GDO\Vote\GDT_VoteCount;
+/** @var $field GDT_VoteCount **/
 $field instanceof GDT_VoteCount;
 $gdo = $field->getVoteObject();
+$voteTable = $gdo->gdoVoteTable();
 ?>
 <span class="<?=$field->name;?>-vote-count-<?= $gdo->getID(); ?>">
 <?php
-$votesNeeded = $gdo->gdoVotesBeforeOutcome();
+$votesNeeded = $voteTable->gdoVotesBeforeOutcome();
 $votesHave = $gdo->getVoteCount();
 if ($votesHave >= $votesNeeded)
 {

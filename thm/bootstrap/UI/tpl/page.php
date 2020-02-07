@@ -19,7 +19,7 @@ use GDO\UI\GDT_Icon;
    <div id="wrapSidebar">
     <nav id="sidebar">
        <div class="sidebar-header">
-            <h3>Recalcolo</h3>
+            <h3><?=sitename()?></h3>
        </div>
       <?= GDT_Bar::make()->vertical()->yieldHook('LeftBar'); ?>
       <hr/>

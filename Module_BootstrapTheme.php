@@ -25,6 +25,8 @@ final class Module_BootstrapTheme extends GDO_Module
 		$this->addCSS("css/gdo-bootstrap-theme-sidebar.css");
 		$this->addCSS("css/gdo-bootstrap-theme-autocomplete.css");
 		$this->addCSS("css/gdo-bootstrap-theme-gdo.css");
+		$this->addCSS("css/gdo-bootstrap-theme-vote.css");
+
 		$this->addJavascript("js/gdo-bootstrap-theme.js");
 	}
 	

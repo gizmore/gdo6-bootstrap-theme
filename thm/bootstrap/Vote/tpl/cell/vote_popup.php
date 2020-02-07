@@ -1,30 +1,32 @@
 <?php
 use GDO\Vote\GDT_VotePopup;
 use GDO\Vote\GDT_VoteSelection;
+use GDO\UI\GDT_Icon;
+/** @var $field GDT_VotePopup **/
 $field instanceof GDT_VotePopup;
 $gdo = $field->gdo;
-$id = $gdo->gdoTableName().$gdo->getID();
+$table = $gdo->gdoVoteTable();
+$idOutcome = $gdo->getVoteOutcomeId();
 
-$votes = $gdo->getVoteCountColumn()->renderCell();
-$rating = $gdo->getVoteRatingColumn()->renderCell();
+$votes = $gdo->getVoteCountColumn()->render();
+$rating = $gdo->getVoteRatingColumn()->render();
 
+$votesNeeded = $table->gdoVotesBeforeOutcome();
+$votesHave = $gdo->getVoteCount();
+$enough = $votesHave >= $votesNeeded;
 
-$voteButton = sprintf('<md-button ng-click="showDialogId(\'#%s\', $event)" class="md-icon-button">', $id);
-$voteButton .= sprintf('<md-icon class="material-icons">stars</md-icon>%s', $rating);
-$voteButton .= "</md-button>\n";
-echo $voteButton;
-?>
-
-<!-- Dialog Rate -->
-<div style="visibility: hidden;">
-  <div class="md-dialog-container" id="<?= $id; ?>">
-	<md-dialog layout-padding>
-	  <h2><?= t('dlg_votepopup_title'); ?></h2>
-	  <p>
-		<?= t('votepopup_rating', [$rating]); ?><br/>
-		<?= t('votepopup_votes', [$votes]); ?><br/>
-		<?= GDT_VoteSelection::make()->gdo($gdo)->renderCell(); ?>
-	  </p>
-	</md-dialog>
-  </div>
-</div>
+echo '<span>';
+echo GDT_Icon::make()->icon('trophy')->color('gold')->render();
+echo "&nbsp;";
+echo '<span id="'.$idOutcome.'">';
+if ($enough)
+{
+	echo t('meta_votes', [$rating, $votes]);
+}
+else
+{
+	echo $rating;
+}
+echo '</span>';
+echo GDT_VoteSelection::make()->gdo($gdo)->render();
+echo '</span>';

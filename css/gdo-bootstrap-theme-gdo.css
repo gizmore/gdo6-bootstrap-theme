@@ -1,3 +1,13 @@
+/** GDO Core **/
+.ri {
+	text-align: right;
+	float: right;
+}
+.cb {
+	clear: both;
+}
+
+/** Bootstrap + GDO **/
 .d-flex > * {
 	flex: 1 0 auto;
 }

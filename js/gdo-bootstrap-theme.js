@@ -1,5 +1,24 @@
+"use strict"
 $(document).ready(function () {
 
+	window.GDO.Vote = {
+		'vote': function(anchor) {
+			var a = $(anchor);
+			var href = anchor.href + '&ajax=1&fmt=json';
+			$.get(href).then(function(response){
+				var res = response.data.json;
+				console.log(res);
+				$('#'+res.outcomeId).html(res.outcome);
+			}, function(response) {
+				console.log(response);
+				alert(response);
+			})
+			return false;
+		}
+	};
+	
+	$('[data-toggle="tooltip"]').tooltip();   
+	
 	$('#sidebarLeftCollapse').on('click', function () {
 		$('#sidebar').toggleClass('active');
 		$('#wrapSidebar').toggleClass('leftActive');

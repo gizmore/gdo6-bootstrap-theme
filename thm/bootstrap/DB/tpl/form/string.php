@@ -3,7 +3,7 @@
   <?= $field->htmlIcon(); ?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input
-   type="text"
+   type="<?=$field->_inputType?>"
    class="form-control"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlPattern(); ?>
