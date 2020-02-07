@@ -3,6 +3,9 @@
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
   <select
+   class="selectpicker"
+   data-width="100%"
+   data-live-search="<?=count($field->choices) > 10 ? 'true' : 'false'?>"
 <?php if ($field->multiple) : ?>
    name="form[<?=$field->name?>][]"
    multiple="multiple"
@@ -14,7 +17,8 @@
    class="form-control">
     <?php if ($field->emptyLabel) : ?>
     <option
-     <?=$field->htmlSelected(null)?>	   
+     data-content='<?=$field->displayEmptyLabel()?>'
+     <? #$field->htmlSelected(null)?>	   
      <?=$field->htmlSelected($field->emptyValue)?>	   
      value="<?=$field->emptyValue?>">
      <?=$field->displayEmptyLabel()?>
@@ -22,6 +26,7 @@
     <?php endif; ?>
 	<?php foreach ($field->choices as $value => $choice) : ?>
 	  <option
+	   data-content='<?=$field->renderChoice($choice)?>'
        <?=$field->htmlSelected($value)?>	   
 	   value="<?= htmlspecialchars($value); ?>">
 		<?= $field->renderChoice($choice); ?>

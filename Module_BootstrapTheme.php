@@ -3,12 +3,17 @@ namespace GDO\BootstrapTheme;
 
 use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
+use GDO\Core\Website;
+use GDO\Util\Javascript;
+use PhpParser\Node\Expr\Include_;
 
 final class Module_BootstrapTheme extends GDO_Module
 {
 	public function getThemes() { return ['bootstrap']; }
 
 	public function getDependencies() { return ['Bootstrap', 'FontAwesome', 'Moment']; }
+	
+	public function onLoadLanguage() { return $this->loadLanguage('lang/bootstrap'); }
 	
 	public function onIncludeScripts()
 	{
@@ -32,5 +37,4 @@ final class Module_BootstrapTheme extends GDO_Module
 
 		$this->addJavascript("js/gdo-bootstrap-theme.js");
 	}
-	
 }

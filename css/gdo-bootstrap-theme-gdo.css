@@ -97,3 +97,7 @@ button.gdt-file-remove {
 	padding: 5px 12px;
 	color: #e00;
 }
+
+img.gdo-country {
+	top: -1px;
+}

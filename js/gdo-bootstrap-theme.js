@@ -52,7 +52,10 @@ $(document).ready(function () {
 		}
 	};
 
-	$('.selectpicker').selectpicker();
+	$('.selectpicker').selectpicker({
+//		'liveSearch': true,
+		'noneResultsText': window.t('no_select_match'),
+	});
 
 	$('[data-toggle="tooltip"]').tooltip();   
 	
