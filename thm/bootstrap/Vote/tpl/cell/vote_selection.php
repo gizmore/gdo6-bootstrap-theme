@@ -1,19 +1,26 @@
-<div class="gdo-rating-stars">
-<?php /** @var $field \GDO\Vote\GDT_VoteSelection **/
+<?php
 use GDO\UI\GDT_Icon;
+/** @var $field \GDO\Vote\GDT_VoteSelection **/
 use GDO\User\GDO_User;
 $vt = $field->voteTable();
 $user = GDO_User::current();
-if ($own = $field->gdo->getVote($user))
-{
-	$own = $own->getVar('vote_value');
-}
+$own = $field->gdo->getVote($user);
+$own = $own ? $own->getVar('vote_value') : '0';
 $max = $vt->gdoVoteMax();
 ?>
-<?php for ($i = 1; $i <= $max; $i++) : ?>
-<?php $color = $own < $i ? '#999' : '#ffd700'; ?>
+<div
+ data-initial="<?=$own?>"
+ class="gdo-rating-stars">
+<?php
+for ($i = 1; $i <= $max; $i++) :
+$color = $own < $i ? '#999' : '#ffd700';
+$icon = GDT_Icon::make()->icon('star')->color($color)->render();
+?>
 <a
+ data-rating="<?=$i?>"
  onclick="return GDO.Vote.vote(this)"
- href="<?=$field->hrefVoteScore($i)?>"><?=GDT_Icon::make()->icon('star')->color($color)->render()?></a>
+ onmouseenter="return GDO.Vote.hoverIn(this)"
+ onmouseleave="return GDO.Vote.hoverOut(this)"
+ href="<?=$field->hrefVoteScore($i)?>"><?=$icon?></a>
 <?php endfor; ?>
 </div>
