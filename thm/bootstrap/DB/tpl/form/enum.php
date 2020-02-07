@@ -1,4 +1,8 @@
-<?php /** @var $field \GDO\Form\GDT_Enum **/ ?>
+<?php
+use GDO\DB\GDT_Enum;
+/** @var $field GDT_Enum **/
+$field instanceof GDT_Enum;
+?>
 <div class="form-group <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
@@ -15,6 +19,8 @@
 	  </option>
 	<?php endif; ?>
 	<?php foreach ($field->enumValues as $enumValue) : ?>
+	   <?php var_dump($enumValue);?>
+	   <?php var_dump(t('enum_acl_all'));?>
 	  <option
 	   <?=$field->htmlSelected($enumValue);?>
 	   value="<?= $enumValue; ?>">
