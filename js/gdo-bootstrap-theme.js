@@ -8,14 +8,13 @@ $(document).ready(function () {
 			var href = anchor.href + '&ajax=1&fmt=json';
 			$.get(href).then(function(response){
 				var res = response.data.json;
-				console.log(res);
 				c.attr('data-initial', a.attr('data-rating'));
 				$('#'+res.outcomeId).html(res.outcome);
 				window.GDO.Vote.hoverOut(anchor);
 				window.GDO.Vote.hoverIn(anchor);
 			}, function(response) {
 				console.log(response);
-				alert(response);
+				alert(response.responseJSON.data.error);
 			})
 			return false;
 		},
