@@ -19,8 +19,6 @@ $field instanceof GDT_Enum;
 	  </option>
 	<?php endif; ?>
 	<?php foreach ($field->enumValues as $enumValue) : ?>
-	   <?php var_dump($enumValue);?>
-	   <?php var_dump(t('enum_acl_all'));?>
 	  <option
 	   <?=$field->htmlSelected($enumValue);?>
 	   value="<?= $enumValue; ?>">
