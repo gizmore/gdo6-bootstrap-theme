@@ -22,6 +22,9 @@ final class Module_BootstrapTheme extends GDO_Module
 		
 		$this->addBowerJavascript("autocomplete.js/dist/autocomplete.jquery$min.js");
 		
+		$this->addBowerCSS("bootstrap-select/dist/css/bootstrap-select$min.css");
+		$this->addBowerJavascript("bootstrap-select/dist/js/bootstrap-select$min.js");
+		
 		$this->addCSS("css/gdo-bootstrap-theme-sidebar.css");
 		$this->addCSS("css/gdo-bootstrap-theme-autocomplete.css");
 		$this->addCSS("css/gdo-bootstrap-theme-gdo.css");

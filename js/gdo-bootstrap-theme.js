@@ -1,6 +1,16 @@
 "use strict"
 $(document).ready(function () {
 
+	window.GDO.Language = {
+		'switch': function(select) {
+			var curr = window.location.pathname + window.location.search;
+			var href = window.GWF_WEB_ROOT + "index.php?mo=Language&me=SwitchLanguage&ref=";
+			href += encodeURIComponent(curr);
+			href += "&lang=" + $(select).val();
+			window.location.href = href;
+		}
+	};
+	
 	window.GDO.Vote = {
 		'vote': function(anchor) {
 			var a = $(anchor);
@@ -41,7 +51,9 @@ $(document).ready(function () {
 			});
 		}
 	};
-	
+
+	$('.selectpicker').selectpicker();
+
 	$('[data-toggle="tooltip"]').tooltip();   
 	
 	$('#sidebarLeftCollapse').on('click', function () {

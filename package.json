@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "autocomplete.js": "^0.37.0",
+    "bootstrap-select": "^1.13.12",
     "bootstrap-slider": "^10.6.2",
     "pc-bootstrap4-datetimepicker": "^4.17.50"
   }
