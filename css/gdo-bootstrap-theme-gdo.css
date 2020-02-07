@@ -32,6 +32,7 @@ footer p {
 .gdt-bar-row {
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .gdt-bar-row > * {
