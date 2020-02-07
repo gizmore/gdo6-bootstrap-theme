@@ -17,6 +17,7 @@ $color = $own < $i ? '#999' : '#ffd700';
 $icon = GDT_Icon::make()->icon('star')->color($color)->render();
 ?>
 <a
+ rel="nofollow"
  data-rating="<?=$i?>"
  onclick="return GDO.Vote.vote(this)"
  onmouseenter="return GDO.Vote.hoverIn(this)"

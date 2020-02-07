@@ -1,7 +1,6 @@
 <?php
 use GDO\Table\GDT_PageMenu;
 use GDO\Table\PageMenuItem;
-
 /** @var $pagemenu GDT_PageMenu **/
 /** @var $pages PageMenuItem[] **/
 $pagemenu instanceof GDT_PageMenu;
@@ -10,7 +9,10 @@ $pagemenu instanceof GDT_PageMenu;
   <ul class="pagination">
 <?php foreach ($pages as $page) : $page instanceof PageMenuItem; ?>
     <li class="page-item <?=$page->isSelected()?'active':''?>">
-      <a class="page-link" href="<?= html($page->href); ?>"><?= $page->page; ?></a>
+      <a
+       class="page-link"
+       href="<?=html($page->href)?>"
+       rel="<?=$pagemenu->relationForPage($page)?>"><?= $page->page; ?></a>
     </li>
 <?php endforeach; ?>
   </ul>
