@@ -87,6 +87,7 @@ body {
   .page-wrapper.toggled .page-content {
     padding-left: 300px;
     padding-right: 32px;
+    padding-bottom: 48px;
   }
 }
 /*----------------show sidebar button----------------*/
