@@ -5,13 +5,14 @@ use GDO\OnlineUsers\Module_OnlineUsers;
 $users = $field->getOnlineUsers();
 $ausers = [];
 $max = Module_OnlineUsers::instance()->cfgNumOnline();
-foreach ($users as $data)
+
+if ($users['users'])
 {
-	/** @var $user \GDO\User\GDO_User **/
-	list ($t, $user) = $data;
-	$uid = $user->getID();
-	
-	$ausers[$uid] = GDT_Link::anchor(href('Profile', 'View', "&user=$uid"), $user->displayNameLabel());
+	foreach ($users['users'] as $user)
+	{
+		$uid = $user->getID();
+		$ausers[$uid] = GDT_Link::anchor(href('Profile', 'View', "&user=$uid"), $user->displayNameLabel());
+	}
 }
 $online = count($ausers);
 $onlineUsers = implode(', ', array_slice($ausers, 0, $max));
