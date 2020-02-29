@@ -3,9 +3,18 @@
 	text-align: right;
 	float: right;
 }
+.fr {
+	float: right;
+}
+
 .cb {
 	clear: both;
 }
+
+.bw {
+	word-break: break-word;
+}
+
 
 /** Bootstrap + GDO **/
 .d-flex > * {
