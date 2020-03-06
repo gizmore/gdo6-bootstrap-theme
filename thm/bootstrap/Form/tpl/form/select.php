@@ -18,7 +18,6 @@
     <?php if ($field->emptyLabel) : ?>
     <option
      data-content='<?=$field->displayEmptyLabel()?>'
-     <? #$field->htmlSelected(null)?>	   
      <?=$field->htmlSelected($field->emptyValue)?>	   
      value="<?=$field->emptyValue?>">
      <?=$field->displayEmptyLabel()?>
