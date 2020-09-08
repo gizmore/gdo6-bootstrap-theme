@@ -1,4 +1,4 @@
-<?php /** @var $field \GDO\DB\GDT_Duration **/ ?>
+<?php /** @var $field \GDO\Date\GDT_Duration **/ ?>
 <div class="form-group <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
