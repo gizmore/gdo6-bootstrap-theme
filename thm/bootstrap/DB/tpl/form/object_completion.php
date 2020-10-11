@@ -4,7 +4,6 @@
 <div
  gdo-autocomplete-init='<?=$field->displayJSON()?>'
  class="form-group gdt-auto-complete <?=$field->classError()?>">
-  <?=$field->htmlTooltip()?>
   <?=$field->htmlIcon()?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input

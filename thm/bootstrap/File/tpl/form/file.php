@@ -18,7 +18,6 @@ $file instanceof GDO_File;
 
 
 <div class="form-group gdo-flow-file <?=$field->classError()?>">
-  <?=$field->htmlTooltip()?>
   <?=$field->htmlIcon()?>
   <?=$field->displayLabel()?>
   <div class="input-group">

@@ -5,7 +5,6 @@ $field instanceof GDT_Email;
 ?>
 <div class="form-group <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
-  <?=$field->htmlTooltip()?>
   <label for="form[<?= $field->name; ?>]"><?=$field->displayLabel()?></label>
   <input
    class="form-control"
