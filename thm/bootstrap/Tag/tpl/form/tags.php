@@ -6,7 +6,7 @@ $id = 'gwftag_'.$field->name; ?>
  class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex
  ng-controller="GDOTagCtrl"
  ng-init='init("#<?= $id; ?>", <?= $field->displayJSON(); ?>)'>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <md-chips
    ng-model="data.tags"
@@ -29,7 +29,7 @@ $id = 'gwftag_'.$field->name; ?>
   <input
    type="hidden"
    id="<?= $id; ?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlDisabled(); ?>/>
   <div class="gdo-form-error"><?= $field->error; ?></div>

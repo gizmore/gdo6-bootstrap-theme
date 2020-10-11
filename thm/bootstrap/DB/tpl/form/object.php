@@ -4,12 +4,13 @@
 <div
  class="form-group <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
+   <?=$field->htmlID()?>
    class="form-control"
    type="number"
    step="1"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
    value="<?=$field->displayVar()?>" />

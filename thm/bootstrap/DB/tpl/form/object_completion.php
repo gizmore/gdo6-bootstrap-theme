@@ -5,11 +5,12 @@
  gdo-autocomplete-init='<?=$field->displayJSON()?>'
  class="form-group gdt-auto-complete <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
+   <?=$field->htmlID()?>
    class="form-control"
    type="text"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
    value="<?=$field->displayVar()?>" />

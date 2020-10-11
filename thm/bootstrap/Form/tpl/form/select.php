@@ -6,12 +6,7 @@
    class="selectpicker"
    data-width="100%"
    data-live-search="<?=count($field->choices) > 10 ? 'true' : 'false'?>"
-<?php if ($field->multiple) : ?>
-   name="form[<?=$field->name?>][]"
-   multiple="multiple"
-<?php else : ?>
-   name="form[<?=$field->name?>]"
-<?php endif; ?>
+   <?=$field->htmlFormName()?>
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>
    class="form-control">

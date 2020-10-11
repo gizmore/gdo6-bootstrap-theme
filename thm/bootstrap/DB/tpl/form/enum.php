@@ -8,7 +8,7 @@ $field instanceof GDT_Enum;
   <label><?= $field->displayLabel(); ?></label>
   <select
    class="form-control"
-   name="form[<?= $field->name?>]">
+   <?=$field->htmlFormName()?>>
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
 	<?php if ($field->emptyLabel) : ?>

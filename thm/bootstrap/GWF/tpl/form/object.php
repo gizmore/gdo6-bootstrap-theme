@@ -3,12 +3,13 @@ use GDO\DB\GDT_Object;
 $field instanceof GDT_Object;
 ?>
 <md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
+   <?=$field->htmlID()?>
    type="number"
    step="1"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>/>

@@ -5,11 +5,12 @@ $field instanceof GDT_Email;
 ?>
 <div class="form-group <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
-  <label for="form[<?= $field->name; ?>]"><?=$field->displayLabel()?></label>
+  <label <?=$field->htmlForID()?>><?=$field->displayLabel()?></label>
   <input
+   <?=$field->htmlID()?>
    class="form-control"
    type="email"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?> />

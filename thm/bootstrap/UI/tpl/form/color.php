@@ -4,10 +4,11 @@ $field instanceof GDT_Color;
 ?>
 <div class="form-group <?= $field->classError(); ?>">
   <?= $field->htmlIcon(); ?>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
+   <?=$field->htmlID()?>
    type="color"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= html($field->getVar()); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>/>

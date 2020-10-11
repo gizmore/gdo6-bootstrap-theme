@@ -6,7 +6,7 @@
   <label><?= $field->displayLabel(); ?></label>
   <input
    class="form-control"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
    value="<?= $field->getVar(); ?>" 

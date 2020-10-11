@@ -2,11 +2,12 @@
 ?>
 <div class="form-group <?= $field->classError(); ?>">
   <?= $field->htmlIcon(); ?>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <textarea
+   <?=$field->htmlID()?>
    novalidate="novalidate"
    class="<?=$field->classEditor()?> form-control"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    rows="6"
    maxRows="6"
    <?= $field->htmlDisabled(); ?>><?= $field->getVar(); ?></textarea>

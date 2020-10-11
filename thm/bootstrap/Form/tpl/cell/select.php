@@ -7,7 +7,7 @@
 <?php if ($field->multiple) : ?>
    multiple="multiple"
 <?php endif; ?>
-   name="form[<?= $field->name?>]">
+   <?=$field->htmlFormName()?>>
 	<?php foreach ($field->choices as $value => $choice) : ?>
 	  <option value="<?= htmlspecialchars($value); ?>">
 		<?= $field->renderChoice($choice); ?>
