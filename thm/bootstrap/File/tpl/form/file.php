@@ -6,16 +6,18 @@ $file = $field->getValue();
 $file instanceof GDO_File;
 ?>
 
-<div class="form-group">
+<?php if ($file && $file->isImageType()) : ?>
+<div id="gdo-file-preview-<?=$field->name?>" class="form-group">
   <img 
    id="preview-image-<?=$field->name?>"
    class="gdt-file-image-preview"
 <?php if ($file && $file->isPersisted()) : ?>
    src="<?=$field->displayPreviewHref($file)?>" />
 <?php else : ?>
+  />
 <?php endif; ?>
 </div>
-
+<?php endif; ?>
 
 <div class="form-group gdo-flow-file <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
@@ -36,9 +38,9 @@ $file instanceof GDO_File;
     <input
      type="text"
      class="form-control"
-     id="gdo-file-preview-<?=$field->name?>"
+     id="gdo-file-input-<?=$field->name?>"
 <?php if ($file && $file->isPersisted()) : ?>
-     value="<?=$file->displayName()?>"
+     value="<?=$file->displayName()?> (<?=$file->getSize()?> bytes)"
 <?php endif; ?>
      readonly />
 <?php if ($file && $file->isPersisted()) : ?>

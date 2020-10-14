@@ -1,37 +1,18 @@
 <?php
 use GDO\Tag\GDT_Tags;
-$field instanceof GDT_Tags;
-$id = 'gwftag_'.$field->name; ?>
-<md-input-container
- class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex
- ng-controller="GDOTagCtrl"
- ng-init='init("#<?= $id; ?>", <?= $field->displayJSON(); ?>)'>
+/** @var $field GDT_Tags **/
+?>
+<div class="form-group <?=$field->classError()?>">
+  <?=$field->htmlIcon()?>
   <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
-  <?= $field->htmlIcon(); ?>
-  <md-chips
-   ng-model="data.tags"
-   md-on-add="onChange()"
-   md-on-remove="onChange()"
-   md-removable="removable"
-   md-add-on-blur="true"
-   md-max-chips="<?= $field->maxTags; ?>"
-   readonly="<?= $field->writable?'false':'true'; ?>"
-   <?= $field->htmlRequired(); ?>
-   placeholder="<?= $field->displayLabel(); ?>">
-   <md-autocomplete
-	md-search-text="searchText"
-	md-items="item in completeTags(searchText)">
-   <md-item-template>
-	 <div md-highlight-text="searchText" md-highlight-flags="^i">{{item}}</div>
-   </md-item-template>
-   </md-autocomplete>
-  </md-chips>
   <input
-   type="hidden"
-   id="<?= $id; ?>"
+   <?=$field->htmlID()?>
+   class="form-control"
+   type="text"
+   data-role="tagsinput"
    <?=$field->htmlFormName()?>
-   value="<?= $field->displayVar(); ?>"
-   <?= $field->htmlDisabled(); ?>/>
-  <div class="gdo-form-error"><?= $field->error; ?></div>
-</md-input-container>
-
+   <?= $field->htmlDisabled(); ?>
+   <?= $field->htmlRequired(); ?>
+   value="<?= $field->getVar(); ?>" />
+  <?=$field->htmlError()?>
+</div>

@@ -6,7 +6,10 @@ use GDO\Profile\GDT_ProfileLink;
 <a name="card-<?=$field->gdo->getID()?>"></a>
 <?php endif; ?>
 
-<div class="card w-100">
+<?php $field->addClass('card')->addClass('w-100'); ?>
+
+<div
+ <?=$field->htmlAttributes()?>>
 
   <div class="card-header">
 <?php if ($field->withCreator) : ?>
@@ -20,11 +23,11 @@ use GDO\Profile\GDT_ProfileLink;
   </div>
 
   <div class="card-body text-primary">
-    <p class="card-text">
+    <div class="card-text">
 <?php foreach ($field->getFields() as $gdt) : ?>
 	<?=$gdt->renderCard()?>
 <?php endforeach; ?>
-    </p>
+    </div>
   </div>
 
 <?php if ($field->getActions()) : ?>

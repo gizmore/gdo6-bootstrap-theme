@@ -1,14 +1,12 @@
 <?php
 use GDO\UI\GDT_Toolbar;
-$field instanceof GDT_Toolbar;
+/** @var $field GDT_Toolbar **/
 ?>
-<md-toolbar md-scroll-shrink>
-  <div class="md-toolbar-tools">
+<div class="btn-toolbar" role="toolbar">
 <?php
 foreach ($field->getFields() as $gdoType)
 {
 	echo $gdoType->renderCell();
 }
 ?>
-  </div>
-</md-toolbar>
+</div>

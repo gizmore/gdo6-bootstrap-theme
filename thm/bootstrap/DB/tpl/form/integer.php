@@ -9,9 +9,15 @@
    <?=$field->htmlFormName()?>
    <?= $field->htmlDisabled(); ?>
    <?= $field->htmlRequired(); ?>
+<?php if ($field->min !== null) : ?>
    min="<?= $field->min; ?>"
+<?php endif; ?>
+<?php if ($field->max !== null) : ?>
    max="<?= $field->max; ?>"
+<?php endif; ?>
+<?php if ($field->step !== null) : ?>
    step="<?= $field->step; ?>"
+<?php endif; ?>
    value="<?= $field->getVar(); ?>" />
   <?=$field->htmlError()?>
 </div>

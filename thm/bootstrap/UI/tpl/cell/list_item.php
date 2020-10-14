@@ -1,17 +1,15 @@
 <?php
 /** @var $gdt \GDO\UI\GDT_ListItem **/
-$gdt->addClass('md-3-line');
 ?>
-<md-list-item <?=$gdt->htmlAttributes()?>>
+<div
+ class="list-group-item"
+ <?=$gdt->htmlAttributes()?>>
 <?php if ($gdt->image) : ?>
-	<div class="gdt-li-image md-avatar"><?=$gdt->image->renderCell()?></div>
+	<div class="fl" style="margin-right: 16px;"><?=$gdt->image->renderCell()?></div>
 <?php endif; ?>
-  <div class="md-list-item-text" layout="column">
-	<?=$gdt->title->renderCell()?>
-	<?=$gdt->subtitle->renderCell()?>
-	<?=$gdt->subtext->renderCell()?>
-  </div>
-  <div class="md-secondary">
+  <h5><?=$gdt->title->renderCell()?></h5>
+  <div class="cb"></div>
+  <small><?=$gdt->subtitle->renderCell()?></small>
+  <p><?=$gdt->subtext->renderCell()?></p>
   <?=$gdt->actions()->render()?>
-  </div>
-</md-list-item>
+</div>

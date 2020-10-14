@@ -1,17 +1,19 @@
 <?php /** @var $field \GDO\Form\GDT_Select **/ ?>
 <div class="form-group <?=$field->htmlClass()?>">
   <?=$field->htmlIcon()?>
-  <label><?= $field->displayLabel(); ?></label>
+<?php if ($label = $field->displayLabel()) : ?>
+  <label><?=$label?></label>
+<?php endif; ?>
   <select
+   <?=$field->htmlAttributes()?>
    class="form-control"
 <?php if ($field->multiple) : ?>
    multiple="multiple"
 <?php endif; ?>
-   <?=$field->htmlFormName()?>>
+   name="<?=$field->name?>">
 	<?php foreach ($field->choices as $value => $choice) : ?>
-	  <option value="<?= htmlspecialchars($value); ?>">
-		<?= $field->renderChoice($choice); ?>
-	  </option>
+	  <?php $sel = $value == $field->var ? ' selected="selected"' : ''; ?>
+	  <option value="<?=htmlspecialchars($value)?>"<?=$sel?>><?= $field->renderChoice($choice); ?></option>
 	<?php endforeach; ?>
   </select>
 </div>

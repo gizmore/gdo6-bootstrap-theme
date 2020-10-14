@@ -36,5 +36,8 @@ final class Module_BootstrapTheme extends GDO_Module
 		$this->addCSS("css/gdo-bootstrap-theme-vote.css");
 
 		$this->addJavascript("js/gdo-bootstrap-theme.js");
+	
+		$this->addCSS("css/tagsinput.css");
+		$this->addJavascript("js/tagsinput.js");
 	}
 }

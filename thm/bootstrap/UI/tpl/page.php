@@ -80,8 +80,7 @@ $user = GDO_User::current();
 
   <!-- Top Nav -->
   <nav
-   class="navbar navbar-expand-lg navbar-light bg-light"
-   style="padding-left: 36px;"><?=GDT_Bar::make()->horizontal()->yieldHook('TopBar')?></nav>
+   class="navbar navbar-expand-lg navbar-light bg-light"><?=GDT_Bar::make()->horizontal()->yieldHook('TopBar')?></nav>
   <!-- Top Nav -->
 
   <!-- sidebar-wrapper  -->

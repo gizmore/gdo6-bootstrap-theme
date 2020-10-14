@@ -363,9 +363,9 @@ body {
   padding-top: 20px;
 }
 
-.page-wrapper .page-content > div {
-  padding: 20px 40px;
-}
+/* .page-wrapper .page-content > div { */
+/*   padding: 20px 40px; */
+/* } */
 
 .page-wrapper .page-content {
   overflow-x: hidden;
@@ -525,4 +525,13 @@ footer {
 .sidebar-menu .dropdown-item.active, .dropdown-item:active {
     color: #b8bfce;
 	background: #31353D;
+}
+
+/** TOP NAV **/
+div.page-wrapper nav.navbar {
+	padding-left: 36px;
+}
+
+div.page-wrapper.toggled nav.navbar {
+	padding-left: 280px;
 }
