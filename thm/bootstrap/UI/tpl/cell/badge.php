@@ -1,5 +1,6 @@
 <?php
 use GDO\UI\GDT_Badge;
 /** @var $field GDT_Badge **/
+$field->addClass('badge badge-primary');
 ?>
-<span class="badge badge-primary"><?=$field->var?></span>
+<span <?=$field->htmlAttributes()?>><?=$field->var?></span>

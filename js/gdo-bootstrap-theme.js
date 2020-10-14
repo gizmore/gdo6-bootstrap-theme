@@ -17,8 +17,10 @@ $(document).ready(function () {
 			var c = a.parent().eq(0);
 			var href = anchor.href + '&ajax=1&fmt=json';
 			$.get(href).then(function(response){
-				var res = response.data.json;
+				var res = response.data.json.json;
 				c.attr('data-initial', a.attr('data-rating'));
+//				$('#'+res.outcomeId).find('.vote-count').html(res.count);
+//				$('#'+res.outcomeId).find('.vote-rating').html(res.rating);
 				$('#'+res.outcomeId).html(res.outcome);
 				window.GDO.Vote.hoverOut(anchor);
 				window.GDO.Vote.hoverIn(anchor);

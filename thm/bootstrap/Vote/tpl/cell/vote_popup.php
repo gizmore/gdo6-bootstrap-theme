@@ -21,7 +21,7 @@ echo "&nbsp;";
 echo '<span id="'.$idOutcome.'">';
 if ($enough)
 {
-	echo t('meta_votes', [$rating, $votes]);
+	echo $rating . $votes;
 }
 else
 {

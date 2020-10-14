@@ -20,7 +20,7 @@ if ($field->searchable)
 ##################
 ### Order Form ###
 ##################
-if ($field->orderable)
+if ($field->orderable && $field->quicksort)
 {
     if ($field->headers)
     {
