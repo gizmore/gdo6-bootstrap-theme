@@ -2,54 +2,43 @@
 use GDO\Table\GDT_List;
 use GDO\Form\GDT_Form;
 use GDO\UI\GDT_SearchField;
-use GDO\Form\GDT_Submit;
-use GDO\Form\GDT_Select;
-use GDO\UI\GDT_Bar;
+use GDO\UI\GDT_Menu;
+use GDO\UI\GDT_Link;
 
 /** @var $field GDT_List **/
 
 ###################
 ### Search Form ###
 ###################
-$formSearch = GDT_Form::make('s')->slim()->methodGET();
 if ($field->searchable)
 {
+    $formSearch = GDT_Form::make('s')->slim()->methodGET();
     $formSearch->addField(GDT_SearchField::make('search'));
+    echo $formSearch->render();
 }
 
 ##################
 ### Order Form ###
 ##################
-$formOrder = $formSearch; # GDT_Form::make('o')->slim()->methodGET();
-if ($field->orderableField)
+if ($field->orderable)
 {
     if ($field->headers)
     {
-        $select = GDT_Select::make('order_by');
+        $menu = GDT_Menu::make('order');
         foreach ($field->headers->fields as $gdt)
         {
-            if ($gdt->orderableField)
+            if ($gdt->orderable)
             {
-                $select->choices[$gdt->name] = $gdt->displayLabel();
+                $link = GDT_Link::make()->rawLabel($gdt->displayLabel());
+                $o = $field->headers->name;
+                $href = $field->replacedHREF("{$o}[order_by]", $gdt->name);
+                $href = $field->replacedHREF("{$o}[order_dir]", $gdt->orderDefaultAsc ? 'ASC' : 'DESC', $href);
+                $link->href($href);
+                $menu->addField($link);
             }
         }
-        $select->initial($field->orderDefault);
-        $formOrder->addField($select);
-        $ascdesc = GDT_Select::make('order_dir');
-        $ascdesc->choices['ASC'] = t('asc');
-        $ascdesc->choices['DESC'] = t('desc');
-        $ascdesc->initial($field->orderDefaultAsc ? 'ASC' : 'DESC');
-        $formOrder->addField($ascdesc);
+        echo $menu->render();
     }
-}
-
-if ($field->searchable || $field->orderableField)
-{
-    $formSearch->addField(GDT_Submit::make('btn_search'));
-    
-    $bar = GDT_Bar::make()->horizontal();
-    $bar->addFields([$formSearch]);
-    echo $bar->render();
 }
 
 ############

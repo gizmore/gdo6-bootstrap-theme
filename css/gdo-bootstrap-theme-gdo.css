@@ -159,3 +159,10 @@ main .gdt-bar-row {
 .gdo-gdt_link:hover {
 	background: #eee;
 }
+
+.gdo-rating-stars .gdo-icon {
+	padding: 0;
+	font-size: 20px;
+    line-height: 20px;
+    vertical-align: sub;
+}
