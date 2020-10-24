@@ -8,10 +8,9 @@ footer p {
 }
 
 .gdt-button {
-	padding: 0;
-	padding-right: 6px;
+	padding: 0px 8px;
 	height: 34px;
-	line-height: 34px;
+	line-height: 30px;
 	border: 1px solid #fff;
 }
 .gdt-button > a {
@@ -31,6 +30,7 @@ td.gdo-gdt_button a {
 }
 
 .gdt-image-button {
+	padding-left: 0px;
 	padding-right: 0px;
 }
 
@@ -176,4 +176,23 @@ main .gdt-bar-row {
     margin: -20px -40px;
     width: calc(100% + 70px);
     height: calc(100vh - 95px);
+}
+
+/* .gdo-tblorder { */
+/* 	position: relative; */
+/* } */
+/* .gdo-tblorder a { */
+/*     position: relative; */
+/* } */
+/* .gdo-tblorder a + br + a { */
+/*     position: relative; */
+/* } */
+
+/* .gdo-tblorder .asc { */
+/* 	top: 30px; */
+/* } */
+
+.gdo-tblorder .asc,
+.gdo-tblorder .desc {
+	font-size: 22px;
 }
