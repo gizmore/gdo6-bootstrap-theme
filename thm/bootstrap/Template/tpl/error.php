@@ -1,7 +1,7 @@
-<?php $response instanceof GDO\Template\Error; ?>
-<div class="" layout="row" layout-fill layout-padding>
-  <md-content layout="row" class="gdo-error md-whiteframe-8dp" flex>
-	<i class="material-icons">report_problem</i>
-	<p><?= $message; ?></p>
-  </md-content>
-</div>
+<?php
+use GDO\Core\GDT_Error;
+use GDO\UI\GDT_Icon;
+/** @var $response GDT_Error **/
+/** @var $message string **/
+?>
+<div class="gdo-error"><p><?=GDT_Icon::rawIconS('error')?><?=$message?></p></div>
