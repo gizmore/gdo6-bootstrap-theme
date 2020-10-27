@@ -9,8 +9,8 @@ $field instanceof GDT_Enum;
   <select
    class="form-control"
    <?=$field->htmlFormName()?>>
-   <?= $field->htmlRequired(); ?>
-   <?= $field->htmlDisabled(); ?>>
+   <?=$field->htmlRequired()?>
+   <?=$field->htmlDisabled()?>>
 	<?php if ($field->emptyLabel) : ?>
 	  <option
 	  <?=$field->htmlSelected($field->emptyValue);?>
@@ -21,8 +21,8 @@ $field instanceof GDT_Enum;
 	<?php foreach ($field->enumValues as $enumValue) : ?>
 	  <option
 	   <?=$field->htmlSelected($enumValue);?>
-	   value="<?= $enumValue; ?>">
-	    <?= t('enum_'.$enumValue); ?>
+	   value="<?=$enumValue?>">
+	    <?=$field->enumLabel($enumValue)?>
 	  </option>
 	<?php endforeach; ?>
   </select>

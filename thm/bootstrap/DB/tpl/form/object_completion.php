@@ -2,7 +2,7 @@
 /** @var $field \GDO\DB\GDT_Object **/
 ?>
 <div
- gdo-autocomplete-init='<?=$field->displayJSON()?>'
+ gdo-autocomplete-init='<?=$field->displayConfigJSON()?>'
  class="form-group gdt-auto-complete <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>

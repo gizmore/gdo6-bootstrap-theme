@@ -1,8 +1,4 @@
 /** Bootstrap + GDO **/
-.d-flex > * {
-	flex: 1 0 auto;
-}
-
 footer p {
 	margin: 0;
 }
@@ -49,7 +45,7 @@ td.gdo-gdt_button a {
 	padding: 16px;
 	border: solid #f7f7f9;
     border-width: .2rem;
-    margin-bottom: 16px;
+/*     margin-bottom: 16px; */
 }
 
 .gdo-form-error, pre.gdo-exception {
@@ -196,3 +192,34 @@ main .gdt-bar-row {
 .gdo-tblorder .desc {
 	font-size: 22px;
 }
+
+/** Lists **/
+.gdt-list h3 { border-top: 1px solid #333; font-size: 22px; background: #bbf; padding: 4px 8px; }
+.gdt-list-item { display: flex; flex-direction: column; }
+.gdt-li-upper { display: flex; flex-direction: row; padding: 0px 4px; border-bottom: 1px solid #bbb; }
+.gdt-li-title { font-size: 18px; margin-top: 4px; }
+.gdt-li-subtitle { font-size: 15px; flex-grow: 1; line-height: 28px; }
+.gdt-li-subtitle * { min-height: 28px; }
+.gdt-li-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
+.gdt-li-main { display: flex; flex-direction: row; padding: 4px 8px; }
+.gdt-list-item p { margin-bottom: 0; }
+.gdt-li-image, .gdt-li-avatar { align-self: center; margin-right: 4px; }
+.gdt-li-lower { border-top: 1px solid #bbb; font-size: 14px; }
+.gdt-li-subtext { padding: 2px 8px; }
+.gdt-list-item:last-child { border-bottom: 1px solid #333; }
+
+/** Cards **/
+.gdo-list-card > .title { padding: 4px 8px 2px; font-size: 20px; background: #ddf; border-bottom: 1px solid #333; }
+.gdt-card-fields { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto; gap: 6px 8px; }
+.gdt-card-fields label { text-align: right; }
+.gdt-card-upper { display: flex; flex-direction: row; }
+.gdt-card-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
+.gdt-card-title { align-self: flex-start; flex-grow: 1; }
+.gdt-card-subtitle { flex-grow: 1; }
+.gdt-card-avatar { margin-right: 8px; align-self: center; }
+.gdt-card-fields * { max-width: 100%; }
+
+/** Pagemenu **/
+ul.pagination { margin: 8px; }
+
+.gdt-divider { background: #eef; border: 1px dashed #666; padding: 8px; }

@@ -20,7 +20,7 @@ $user = GDO_User::current();
 </head>
 <body>
 
-<div class="page-wrapper chiller-theme n">
+ <div class="page-wrapper chiller-theme n" style="min-height: 100vh;">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
   </a>
@@ -78,22 +78,16 @@ $user = GDO_User::current();
     <!-- sidebar-content  -->
   </nav>
 
-  <!-- Top Nav -->
-  <nav
-   class="navbar navbar-expand-lg navbar-light bg-light"><?=GDT_Bar::make()->horizontal()->yieldHook('TopBar')?></nav>
-  <!-- Top Nav -->
 
   <!-- sidebar-wrapper  -->
-  <main class="page-content">
-    <?=$page->html?>
-  </main>
+  <div class="d-flex flex-column" style="min-height: 100vh;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"><?=GDT_Bar::make()->horizontal()->yieldHook('TopBar')?></nav>
+    <main class="page-content flex-fill"><?=$page->html?></main>
+    <footer class="page-footer font-small blue"><?=GDT_Bar::make()->horizontal()->yieldHook('BottomBar')?></footer>
+  </div>
   <!-- page-content" -->
 
-  <!-- Footer -->
-  <footer class="page-footer font-small blue fixed-bottom"><?=GDT_Bar::make()->horizontal()->yieldHook('BottomBar')?></footer>
-  <!-- Footer -->
-
-</div>
+ </div>
 <!-- page-wrapper -->
 
 <!-- JS finish -->

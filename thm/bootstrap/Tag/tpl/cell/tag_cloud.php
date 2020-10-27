@@ -4,6 +4,11 @@ use GDO\Tag\GDT_TagCloud;
 $filterValue = $field->filterValue();
 ?>
 <div class="gdo-tag-cloud">
+  <a
+   href="<?= $field->hrefTagFilter(); ?>"
+   class="badge <?= !$filterValue ? 'badge-primary' : 'badge-secondary'; ?>">
+    <span><?= t('all'); ?>(<?= $field->totalCount(); ?>)</span>
+ </a>
 <?php foreach ($field->getTags() as $tag) : ?>
   <a
    href="<?= $field->hrefTagFilter($tag); ?>"

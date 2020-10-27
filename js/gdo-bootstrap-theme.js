@@ -133,7 +133,7 @@ $(function() {
 	});
 	
 	// init
-	if ($(window).width() > 800) {
+	if ($(document).width() > 800) {
 		$(".page-wrapper").addClass("toggled");
 	}
 	

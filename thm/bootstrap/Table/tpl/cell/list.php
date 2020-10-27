@@ -12,7 +12,7 @@ use GDO\UI\GDT_Link;
 ###################
 if ($field->searchable)
 {
-    $formSearch = GDT_Form::make('s')->slim()->methodGET();
+    $formSearch = GDT_Form::make($field->headers->name)->slim()->methodGET();
     $formSearch->addField(GDT_SearchField::make('search'));
     echo $formSearch->render();
 }
@@ -53,7 +53,7 @@ $template = $field->getItemTemplate();
 echo $pagemenu;
 ?>
 <!-- Begin List -->
-<div class="list-group">
+<div class="gdt-list list-group">
 <?php if ($field->title) : ?>
   <h3><?=$field->title?></h3>
 <?php endif; ?>
