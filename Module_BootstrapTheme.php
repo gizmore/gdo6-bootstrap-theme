@@ -7,6 +7,9 @@ use GDO\Core\Application;
 
 /**
  * Bootstrap4 Theme.
+ * 
+ * Uses https://github.com/algolia/autocomplete.js/
+ * 
  * @author gizmore
  * @version 6.10
  * @since 6.08

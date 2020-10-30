@@ -6,7 +6,7 @@ $field instanceof GDT_Submit;
 <input
  type="submit"
  class="btn btn-primary"
- name="<?=$field->name?>"
+ name="<?=$field->formName()?>"
  value="<?=$field->displayLabel()?>"
  <?=$field->htmlAttributes()?>
  <?=$field->htmlDisabled()?> /></input>

@@ -3,7 +3,7 @@ use GDO\DB\GDT_Enum;
 /** @var $field GDT_Enum **/
 $field instanceof GDT_Enum;
 ?>
-<div class="form-group <?=$field->classError()?>">
+<div class="form-group gdt-enum <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
   <select

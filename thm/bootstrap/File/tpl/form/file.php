@@ -24,7 +24,7 @@ use GDO\UI\GDT_Icon;
 <?php endif; ?>
 <?php endforeach; ?>
 
-<div id="gdt-file-preview-<?=$field->name?>">
+<div id="gdo-file-preview-<?=$field->name?>">
 </div>
 
 <div class="form-group gdo-flow-file <?=$field->classError()?>">
@@ -33,7 +33,7 @@ use GDO\UI\GDT_Icon;
   <div class="input-group">
     <label class="input-group-btn">
         <span class="btn btn-primary">
-            Browse&hellip;
+            <?=t('browse')?>
             <input
 <?php if ($field->multiple) : ?>
              multiple="multiple"

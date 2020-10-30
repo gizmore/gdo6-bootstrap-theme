@@ -213,6 +213,7 @@ main .gdt-bar-row {
 .gdt-card-fields { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto; gap: 6px 8px; }
 .gdt-card-fields label { text-align: right; }
 .gdt-card-upper { display: flex; flex-direction: row; }
+.gdt-card-upper img { max-width: 64px; max-height: 64px; }
 .gdt-card-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
 .gdt-card-title { align-self: flex-start; flex-grow: 1; }
 .gdt-card-subtitle { flex-grow: 1; }
@@ -222,4 +223,4 @@ main .gdt-bar-row {
 /** Pagemenu **/
 ul.pagination { margin: 8px; }
 
-.gdt-divider { background: #eef; border: 1px dashed #666; padding: 8px; }
+.gdt-divider { background: #eef; border: 1px dashed #666; padding: 8px; margin-bottom: 16px; }

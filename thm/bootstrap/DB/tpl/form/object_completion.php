@@ -2,8 +2,8 @@
 /** @var $field \GDO\DB\GDT_Object **/
 ?>
 <div
- gdo-autocomplete-init='<?=$field->displayConfigJSON()?>'
- class="form-group gdt-auto-complete <?=$field->classError()?>">
+ data-gdt-config='<?=$field->displayConfigJSON()?>'
+ class="form-group gdo-autocomplete <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
@@ -15,5 +15,6 @@
    <?=$field->htmlRequired()?>
    value="<?=$field->displayVar()?>" />
   <input type="hidden" name="nocompletion_<?=$field->name?>" value="1" />
+  <input type="hidden" id="gdo-autocomplete-id-<?=$field->name?>" />
   <?= $field->htmlError(); ?>
 </div>

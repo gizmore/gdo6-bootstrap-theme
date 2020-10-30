@@ -70,42 +70,64 @@ $(document).ready(function () {
 	$('.gdt-datetime input').datetimepicker({
 		useCurrent: false,
 		locale: window.GWF_LANGUGE,
-		format: 'YYYY-MM-DD hh:ii:ss'
+		format: window.GDO_TRANS.t('df_moment_long'),
 	});
 	
 	$('.gdt-date input').datetimepicker({
 		useCurrent: false,
 		locale: window.GWF_LANGUGE,
-		format: 'YYYY-MM-DD'
+		format: window.GDO_TRANS.t('df_moment_day'),
 	});
 	
 	$('.gdt-birthdate input').datetimepicker({
 		locale: window.GWF_LANGUGE,
-		format: 'YYYY-MM-DD',
+		format: window.GDO_TRANS.t('df_moment_day'),
 		viewMode: 'years',
 		maxDate: new Date(),
 		useCurrent: false
 	});
 	
 	// Autocomplete
-	$('.gdt-auto-complete').each(function() {
+	$('.gdo-autocomplete').each(function() {
 		var that = $(this);
-		var datajson = JSON.parse(that.attr('gdo-autocomplete-init'));
-		var input = that.find('input');
+		var datajson = JSON.parse(that.attr('data-gdt-config'));
+		var input = that.find('input.form-control');
+		
+		// switch hidden field
+		var name = datajson.name;
+		var hidden = $('#gdo-autocomplete-id-'+name);
+		hidden.attr('name', input.attr('name'));
+		input.removeAttr('name');
+		hidden.val(input.val());
+		
+		if (datajson.selected.id == datajson.emptyValue) {
+			input.attr('placeholder', datajson.selected.text);
+		}
+		else {
+			input.val(datajson.selected.text)
+		}
 		input.autocomplete({
 		}, [
 			{
 				displayKey: function(result) {
 					return result.text;
 				},
+				templates: {
+					suggestion: function(suggestion) {
+						return suggestion.display;
+					}
+				},
 				source: function name(query, callback) {
 					$.get(datajson.completionHref + "&query=" + encodeURIComponent(query)).then(function(result){
 						callback(result);
 					});
-					
 				}
 			}
-		]);
+		]).on('autocomplete:selected', function(event, suggestion, dataset, context) {
+//			var name = $(event.target).attr('data-gdt-name');
+//			var hidden = $('#gdo-autocomplete-id-'+name);
+			hidden.val(suggestion.id);
+		});
 	});
 	
 });

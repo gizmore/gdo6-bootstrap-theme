@@ -103,7 +103,11 @@ html { height: 100%; }
     padding-left: 260px;
   }
   
+  .page-wrapper.toggled nav.navbar {
+    padding-left: 260px;
+  }
 }
+
 /*----------------show sidebar button----------------*/
 #show-sidebar {
   position: fixed;

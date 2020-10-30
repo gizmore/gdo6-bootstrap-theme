@@ -9,7 +9,6 @@
    class="<?=$field->classEditor()?> form-control"
    <?=$field->htmlFormName()?>
    rows="6"
-   maxRows="6"
-   <?= $field->htmlDisabled(); ?>><?= $field->getVar(); ?></textarea>
+   <?= $field->htmlDisabled(); ?>><?= $field->displayVar(); ?></textarea>
   <?=$field->htmlError()?>
 </div>
