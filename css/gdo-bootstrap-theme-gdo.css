@@ -199,7 +199,7 @@ main .gdt-bar-row {
 .gdt-li-upper { display: flex; flex-direction: row; padding: 0px 4px; border-bottom: 1px solid #bbb; }
 .gdt-li-title { font-size: 18px; margin-top: 4px; }
 .gdt-li-subtitle { font-size: 15px; flex-grow: 1; line-height: 28px; }
-.gdt-li-subtitle * { min-height: 28px; }
+.gdt-li-subtitle > * { min-height: 28px; }
 .gdt-li-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
 .gdt-li-main { display: flex; flex-direction: row; padding: 4px 8px; }
 .gdt-list-item p { margin-bottom: 0; }
@@ -211,7 +211,7 @@ main .gdt-bar-row {
 /** Cards **/
 .gdo-list-card > .title { padding: 4px 8px 2px; font-size: 20px; background: #ddf; border-bottom: 1px solid #333; }
 .gdt-card-fields { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto; gap: 6px 8px; }
-.gdt-card-fields label { text-align: right; }
+.gdt-card-fields > *:nth-child(odd) { text-align: right; }
 .gdt-card-upper { display: flex; flex-direction: row; }
 .gdt-card-upper img { max-width: 64px; max-height: 64px; }
 .gdt-card-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
