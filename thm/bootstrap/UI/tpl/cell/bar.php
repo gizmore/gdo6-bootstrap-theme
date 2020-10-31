@@ -4,10 +4,10 @@ $bar->addClass('gdt-bar-' . $bar->htmlDirection());
 $bar->addClass('flx');
 $bar->addClass('flx-' . $bar->htmlDirection());
 ?>
-<div <?=$bar->htmlAttributes()?>>
 <?php if ($bar->fields) : ?>
+<div <?=$bar->htmlAttributes()?>>
   <?php foreach ($bar->fields as $field) : ?>
 	<?= $field->render(); ?>
   <?php endforeach; ?>
-<?php endif;?>
 </div>  
+<?php endif;?>

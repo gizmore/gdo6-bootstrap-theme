@@ -193,6 +193,9 @@ main .gdt-bar-row {
 	font-size: 22px;
 }
 
+/** Forms **/
+.form-group { position: relative; }
+
 /** Lists **/
 .gdt-list h3 { border-top: 1px solid #333; font-size: 22px; background: #bbf; padding: 4px 8px; }
 .gdt-list-item { display: flex; flex-direction: column; }

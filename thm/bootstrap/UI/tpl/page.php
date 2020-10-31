@@ -1,10 +1,11 @@
 <?php /** @var $page \GDO\UI\GDT_Page **/
 use GDO\Core\Website;
 use GDO\Util\Javascript;
-use GDO\UI\GDT_Bar;
 use GDO\Core\Module_Core;
 use GDO\Avatar\GDO_Avatar;
 use GDO\User\GDO_User;
+use GDO\UI\GDT_Page;
+/** @var $page GDT_Page **/
 $user = GDO_User::current();
 ?>
 <!DOCTYPE html>
@@ -58,7 +59,7 @@ $user = GDO_User::current();
 
         <hr/>
   
-        <?=GDT_Bar::make()->vertical()->yieldHook('LeftBar')?>
+        <?=$page->leftNav->render()?>
 
         <hr/>
   
@@ -68,7 +69,7 @@ $user = GDO_User::current();
           </li>
         </ul>
 
-        <?=GDT_Bar::make()->vertical()->yieldHook('RightBar')?>
+        <?=$page->rightNav->render()?>
 
         <hr/>
   
@@ -81,9 +82,9 @@ $user = GDO_User::current();
 
   <!-- sidebar-wrapper  -->
   <div class="d-flex flex-column" style="min-height: 100vh;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"><?=GDT_Bar::make()->horizontal()->yieldHook('TopBar')?></nav>
-    <main class="page-content flex-fill"><?=$page->html?></main>
-    <footer class="page-footer font-small blue"><?=GDT_Bar::make()->horizontal()->yieldHook('BottomBar')?></footer>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"><?=$page->topNav->render()?></nav>
+    <main class="page-content flex-fill"><?=$page->topTabs->render()?><?=Website::renderTopResponse()?> <?=$page->html?></main>
+    <footer class="page-footer font-small blue"><?=$page->bottomNav->render()?></footer>
   </div>
   <!-- page-content" -->
 
