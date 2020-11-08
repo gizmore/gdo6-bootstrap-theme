@@ -7,7 +7,7 @@ use GDO\File\GDO_File;
 <?php if ($gdo) : ?>
 <?php if ( ($gdo->isImageType()) && ($field->previewHREF) ) : ?>
 <div class="gdo-file gdo-image-file">
-  <img src="<?=$field->displayPreviewHref()?>" alt="Image" style="<?=$field->styleSize()?>" />
+  <img src="<?=$field->displayPreviewHref($gdo)?>" alt="Image" style="<?=$field->styleSize()?>" />
 </div>
 <?php endif ; ?>
 <?php if ($field->withFileInfo) : ?>

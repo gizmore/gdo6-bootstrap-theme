@@ -10,7 +10,7 @@ $result = $field->getResult();
 <div
  class="gdo-table table-responsive">
 <?php if (!$form) : ?>
-<form method="get" action="<?= $field->href; ?>" class="b">
+<form method="get" action="<?=$field->href?>" class="b">
 <?php endif; ?>
   <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />

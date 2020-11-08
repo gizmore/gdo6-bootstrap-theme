@@ -25,9 +25,10 @@ td.gdo-gdt_button a {
     line-height: 36px;
 }
 
-.gdt-image-button {
+div.gdt-image-button {
+	margin-top: 8px;
 	padding-left: 0px;
-	padding-right: 0px;
+/* 	padding-right: 0px; */
 }
 
 .gdt-bar-row {
@@ -227,3 +228,23 @@ main .gdt-bar-row {
 ul.pagination { margin: 8px; }
 
 .gdt-divider { background: #eef; border: 1px dashed #666; padding: 8px; margin-bottom: 16px; }
+
+/** Loading **/
+.gdt-loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.5; background: #000; z-index: 3; pointer-events: none; }
+.gdt-loading.done { display: none; }
+.gdt-loading span { background: url(ajax-loader.gif) center no-repeat; display: block; height: 100%; }
+
+/** Sidebar **/
+nav#sidebar .gdt-divider { padding: 0; margin: 0; margin-top: 4px; background: #aaa; }
+nav#sidebar hr { padding: 0; margin: 0; }
+nav#sidebar .dropdown { padding: 0; margin: 0; margin-left: 16px; }
+.sidebar-wrapper .sidebar-header { padding: 0; margin: 0; }
+.sidebar-wrapper .sidebar-header .user-pic { width: auto; }
+nav#sidebar img.gdo-language { vertical-align: baseline; }
+
+/** Panel **/
+.gdo-panel { padding: 16px; }
+/* .gdo-container { padding: 16px; } */
+
+/** Flags **/
+img.gdo-country { top: 5px; }

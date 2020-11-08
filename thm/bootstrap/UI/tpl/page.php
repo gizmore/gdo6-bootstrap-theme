@@ -5,6 +5,8 @@ use GDO\Core\Module_Core;
 use GDO\Avatar\GDO_Avatar;
 use GDO\User\GDO_User;
 use GDO\UI\GDT_Page;
+use GDO\UI\GDT_Loading;
+use GDO\Profile\GDT_ProfileLink;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
 ?>
@@ -40,7 +42,7 @@ $user = GDO_User::current();
       <div class="sidebar-header">
         <?php if (module_enabled('Avatar')) : ?>
         <div class="user-pic">
-          <?=GDO_Avatar::renderAvatar($user)?>
+          <?=GDT_ProfileLink::make()->forUser($user)->withAvatar()->withNickname(false)->renderCell()?>
         </div>
         <?php endif; ?>
         <div class="user-info">
@@ -90,6 +92,8 @@ $user = GDO_User::current();
 
  </div>
 <!-- page-wrapper -->
+
+ <?=GDT_Loading::make()->renderCell()?>
 
 <!-- JS finish -->
 <?= Javascript::displayJavascripts(Module_Core::instance()->cfgMinifyJS() === 'concat'); ?>

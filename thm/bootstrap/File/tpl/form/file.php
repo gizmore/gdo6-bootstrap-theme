@@ -1,13 +1,12 @@
 <?php
 use GDO\File\GDT_File;
-use GDO\UI\GDT_Icon;
 /** @var $field GDT_File **/
 ?>
 
 <?php foreach ($field->getInitialFiles() as $file) : ?>
-<?php $deleteButton = $field->noDelete ? '' : sprintf('<input type="submit" name="delete_%s[%s]" value="Remove File" onclick="return confirm(\'%s\')"/>', $field->name, $file->getID(), t('confirm_delete')); ?>
-<?php if ($file && $file->isImageType()) : ?>
+<?php $deleteButton = $field->noDelete ? '' : sprintf('<input type="submit" name="delete_%s[%s]" value="Remove File" onclick="return confirm(\'%s\')" />', $field->name, $file->getID(), t('confirm_delete')); ?>
 <div id="gdo-file-preview-<?=$file->getID()?>" class="form-group">
+<?php if ($file && $file->isImageType()) : ?>
 <?php if ($file->isImageType()) : ?>
   <img 
    class="gdt-file-image-preview"
@@ -15,17 +14,15 @@ use GDO\UI\GDT_Icon;
    src="<?=$field->displayPreviewHref($file)?>"
 <?php endif; ?>
   />
+<?php endif; ?>
 <?php else : ?>
   <span class="gdt-file-preview"><?=$file->displayName()?> <?=$file->displaySize()?></span>
 <?php endif; ?>
   <?=$deleteButton?>
-  
 </div>
-<?php endif; ?>
 <?php endforeach; ?>
 
-<div id="gdo-file-preview-<?=$field->name?>">
-</div>
+<div id="gdo-file-preview-<?=$field->name?>"></div>
 
 <div class="form-group gdo-flow-file <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
