@@ -1,7 +1,12 @@
 <?php $form instanceof GDO\Form\GDT_Form; ?>
 <!-- Begin Form -->
 <div class="gdt-form">
+<?php if ($form->title) : ?>
 <h3><?=html($form->title)?></h3>
+<?php endif; ?>
+<?php if ($form->info) : ?>
+<p><?=$form->info?></p>
+<?php endif; ?>
 <form
  id="form_<?=$form->name;?>"
  action="<?= $form->action; ?>"
