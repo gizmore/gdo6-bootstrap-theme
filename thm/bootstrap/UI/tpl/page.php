@@ -2,13 +2,13 @@
 use GDO\Core\Website;
 use GDO\Util\Javascript;
 use GDO\Core\Module_Core;
-use GDO\Avatar\GDO_Avatar;
 use GDO\User\GDO_User;
 use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
 use GDO\Profile\GDT_ProfileLink;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
+$page->loadSidebars();
 ?>
 <!DOCTYPE html>
 <html>
