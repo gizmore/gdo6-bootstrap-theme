@@ -200,7 +200,7 @@ main .gdt-bar-row {
 /** Lists **/
 .gdt-list h3 { border-top: 1px solid #333; font-size: 22px; background: #bbf; padding: 4px 8px; }
 .gdt-list-item { display: flex; flex-direction: column; }
-.gdt-li-upper { display: flex; flex-direction: row; padding: 0px 4px; border-bottom: 1px solid #bbb; }
+.gdt-li-upper { display: flex; flex-direction: row; padding: 0px 4px 4px; border-bottom: 1px solid #bbb; }
 .gdt-li-title { font-size: 18px; margin-top: 4px; }
 .gdt-li-subtitle { font-size: 15px; flex-grow: 1; line-height: 28px; }
 .gdt-li-subtitle > * { min-height: 28px; }
