@@ -4,6 +4,7 @@ namespace GDO\BootstrapTheme;
 use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
 use GDO\Core\Application;
+use GDO\Bootstrap\Module_Bootstrap;
 
 /**
  * Bootstrap4 Theme.
@@ -16,7 +17,7 @@ use GDO\Core\Application;
  */
 final class Module_BootstrapTheme extends GDO_Module
 {
-	public function getThemes() { return ['bootstrap']; }
+	public function getTheme() { return 'bootstrap'; }
 
 	public function getDependencies() { return ['Bootstrap', 'FontAwesome', 'Moment']; }
 	
@@ -24,9 +25,10 @@ final class Module_BootstrapTheme extends GDO_Module
 	
 	public function onIncludeScripts()
 	{
-	    $themes = Application::instance()->getThemes();
-	    if (in_array('bootstrap', $themes, true))
+	    if (Application::instance()->hasTheme('bootstrap'))
 	    {
+	        $this->onIncludeBootstrap4();
+	        
     		$min = Module_Core::instance()->cfgMinifyJS() === 'no' ? '' : '.min';
     		
     		$this->addBowerCSS("bootstrap-slider/dist/css/bootstrap-slider$min.css");
@@ -49,6 +51,18 @@ final class Module_BootstrapTheme extends GDO_Module
     	
     		$this->addCSS("css/tagsinput.css");
     		$this->addJavascript("js/tagsinput.js");
+	    }
+	}
+	
+	/**
+	 * Include bootstrap4 if not done yet.
+	 */
+	private function onIncludeBootstrap4()
+	{
+	    $m = Module_Bootstrap::instance();
+	    if (!$m->cfgIncludeBootstrap())
+	    {
+	        $m->onIncludeBootstrap4();
 	    }
 	}
 }
