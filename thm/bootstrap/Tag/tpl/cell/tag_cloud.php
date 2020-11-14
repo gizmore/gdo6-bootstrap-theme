@@ -1,20 +1,20 @@
 <?php
 use GDO\Tag\GDT_TagCloud;
 /** @var $field GDT_TagCloud **/
-$filterValue = $field->filterValue();
+$filterVar = $field->filterVar();
 ?>
 <div class="gdo-tag-cloud">
   <a
    href="<?= $field->hrefTagFilter(); ?>"
-   class="badge <?= !$filterValue ? 'badge-primary' : 'badge-secondary'; ?>">
+   class="badge <?= !$filterVar ? 'badge-primary' : 'badge-secondary'; ?>">
     <span><?= t('all'); ?>(<?= $field->totalCount(); ?>)</span>
  </a>
 <?php foreach ($field->getTags() as $tag) : ?>
   <a
    href="<?= $field->hrefTagFilter($tag); ?>"
-   class="badge <?= $filterValue === $tag->getID() ? 'badge-primary' : 'badge-secondary'; ?>">
+   class="badge <?= $filterVar === $tag->getID() ? 'badge-primary' : 'badge-secondary'; ?>">
     <span><?= $tag->displayName(); ?>(<?= $tag->getCount(); ?>)</span>
  </a>
 <?php endforeach; ?>
-  <input type="hidden" name="f[<?= $field->name; ?>]" value="<?= html($filterValue); ?>" />
+  <input type="hidden" name="f[<?= $field->name; ?>]" value="<?= html($filterVar); ?>" />
 </div>

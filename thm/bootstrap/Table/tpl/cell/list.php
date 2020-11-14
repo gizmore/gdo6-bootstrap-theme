@@ -10,7 +10,7 @@ use GDO\UI\GDT_Link;
 ###################
 ### Search Form ###
 ###################
-if ($field->searchable)
+if ($field->searched)
 {
     $formSearch = GDT_Form::make($field->headers->name)->slim()->methodGET();
     $formSearch->addField(GDT_SearchField::make('search'));
@@ -20,7 +20,7 @@ if ($field->searchable)
 ##################
 ### Order Form ###
 ##################
-if ($field->orderable && $field->quicksort)
+if ($field->ordered || $field->)
 {
     if ($field->headers)
     {
@@ -29,7 +29,7 @@ if ($field->orderable && $field->quicksort)
         {
             if ($gdt->orderable)
             {
-                $link = GDT_Link::make()->rawLabel($gdt->displayLabel());
+                $link = GDT_Link::make()->labelRaw($gdt->displayLabel());
                 $o = $field->headers->name;
                 $href = $field->replacedHREF("{$o}[order_by]", $gdt->name);
                 $href = $field->replacedHREF("{$o}[order_dir]", $gdt->orderDefaultAsc ? 'ASC' : 'DESC', $href);
@@ -45,7 +45,7 @@ if ($field->orderable && $field->quicksort)
 ### List ###
 ############
 $pagemenu = $field->getPageMenu();
-$pagemenu = $pagemenu ? $pagemenu->render() : '';
+$pagemenu = $pagemenu ? $pagemenu->renderCell() : '';
 
 $result = $field->getResult();
 $template = $field->getItemTemplate();
@@ -54,8 +54,8 @@ echo $pagemenu;
 ?>
 <!-- Begin List -->
 <div class="gdt-list list-group">
-<?php if ($field->title) : ?>
-  <h3><?=$field->title?></h3>
+<?php if ($field->hasTitle()) : ?>
+  <h3><?=$field->renderTitle()?></h3>
 <?php endif; ?>
 <?php
 while ($gdo = $result->fetchObject()) :
