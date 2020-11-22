@@ -20,7 +20,7 @@ if ($field->searched)
 ##################
 ### Order Form ###
 ##################
-if ($field->ordered || $field->)
+if ($field->ordered)
 {
     if ($field->headers)
     {
@@ -52,7 +52,6 @@ $template = $field->getItemTemplate();
 
 echo $pagemenu;
 ?>
-<!-- Begin List -->
 <div class="gdt-list list-group">
 <?php if ($field->hasTitle()) : ?>
   <h3><?=$field->renderTitle()?></h3>
@@ -63,6 +62,5 @@ while ($gdo = $result->fetchObject()) :
 endwhile;
 ?>
 </div>
-<!-- End of List -->
 <?php
 echo $pagemenu;
