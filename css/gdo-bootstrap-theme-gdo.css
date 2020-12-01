@@ -205,7 +205,7 @@ main .gdt-bar-row {
 .gdt-li-subtitle { font-size: 15px; flex-grow: 1; line-height: 28px; }
 .gdt-li-subtitle > * { min-height: 28px; }
 .gdt-li-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
-.gdt-li-main { display: flex; flex-direction: row; padding: 4px 8px; }
+/* .gdt-li-main { display: flex; flex-direction: row; padding: 4px 8px; } */
 .gdt-list-item p { margin-bottom: 0; }
 .gdt-li-image, .gdt-li-avatar { align-self: center; margin-right: 4px; }
 .gdt-li-lower { border-top: 1px solid #bbb; font-size: 14px; }
@@ -248,3 +248,6 @@ nav#sidebar img.gdo-language { vertical-align: baseline; }
 
 /** Flags **/
 img.gdo-country { top: 5px; }
+
+/** Prism **/
+.line-numbers-rows > span { height: auto!important; }

@@ -52,15 +52,19 @@ $template = $field->getItemTemplate();
 
 echo $pagemenu;
 ?>
-<div class="gdt-list list-group">
+<div class="gdt-list card">
 <?php if ($field->hasTitle()) : ?>
-  <h3><?=$field->renderTitle()?></h3>
+  <div class="card-header">
+    <?=$field->renderTitle()?>
+  </div>
 <?php endif; ?>
+  <div class="list-group list-group-flush">
 <?php
 while ($gdo = $result->fetchObject()) :
 	echo $template->gdo($gdo)->renderList();
 endwhile;
 ?>
+  </div>
 </div>
 <?php
 echo $pagemenu;

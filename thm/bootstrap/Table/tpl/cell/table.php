@@ -14,8 +14,8 @@ $result = $field->getResult();
 <?php endif; ?>
   <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />
-  <?php if ($field->title) : ?>
-  <h3><?= $field->title; ?></h3>
+  <?php if ($field->hasTitle()) : ?>
+  <h3><?= $field->renderTitle(); ?></h3>
   <?php endif; ?>
   <table id="gwfdt-<?= $field->name; ?>" class="table">
 	<thead>
@@ -29,7 +29,7 @@ $result = $field->getResult();
 			<?php endif; ?>
 		  </label>
 		  <?php if ($field->filtered) : ?>
-		  <br/><?= $gdoType->renderFilter($headers->name); ?>
+		  <br/><?= $gdoType->renderFilter($field->headers->name); ?>
 		  <?php endif; ?>
 		</th>
 	  <?php endforeach; ?>

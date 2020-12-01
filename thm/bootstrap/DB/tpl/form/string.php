@@ -5,7 +5,7 @@
   <input
    <?=$field->htmlID()?>
    type="<?=$field->_inputType?>"
-   class="form-control"
+   class="form-control gdo-auto-complete"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlPattern(); ?>
    <?= $field->htmlDisabled(); ?>
