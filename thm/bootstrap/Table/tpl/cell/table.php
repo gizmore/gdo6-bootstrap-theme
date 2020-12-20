@@ -21,6 +21,7 @@ $result = $field->getResult();
 	<thead>
 	  <tr>
 	  <?php foreach($headers as $gdoType) : ?>
+	  <?php if (!$gdoType->hidden) : ?>
 		<th class="<?= $gdoType->htmlClass(); ?>">
 		  <label>
 			<?= $gdoType->renderHeader(); ?>
@@ -32,6 +33,7 @@ $result = $field->getResult();
 		  <br/><?= $gdoType->renderFilter($field->headers->name); ?>
 		  <?php endif; ?>
 		</th>
+	  <?php endif; ?>
 	  <?php endforeach; ?>
 	  </tr>
 	</thead>
@@ -39,10 +41,12 @@ $result = $field->getResult();
 	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
 	<tr gdo-id="<?=$gdo->getID()?>">
 	  <?php foreach($headers as $gdoType) :
+	  if (!$gdoType->hidden) : 
 	  $col = $field->getField($gdoType->name);
 	  $gdoType = $col ? $col : $gdoType;
 	  $gdoType->gdo($gdo); ?>
 		<td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
+	  <?php endif; ?>
 	  <?php endforeach; ?>
 	</tr>
 	<?php endwhile; ?>

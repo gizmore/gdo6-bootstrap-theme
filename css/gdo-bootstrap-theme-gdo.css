@@ -215,7 +215,7 @@ main .gdt-bar-row {
 /** Cards **/
 .gdo-list-card > .title { padding: 4px 8px 2px; font-size: 20px; background: #ddf; border-bottom: 1px solid #333; }
 .gdt-card-fields { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto; gap: 6px 8px; }
-.gdt-card-fields > *:nth-child(odd) { text-align: right; }
+/* .gdt-card-fields > *:nth-child(odd) { text-align: right; } */
 .gdt-card-upper { display: flex; flex-direction: row; }
 .gdt-card-upper img { max-width: 64px; max-height: 64px; }
 .gdt-card-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
@@ -223,6 +223,8 @@ main .gdt-bar-row {
 .gdt-card-subtitle { flex-grow: 1; }
 .gdt-card-avatar { margin-right: 8px; align-self: center; }
 .gdt-card-fields * { max-width: 100%; }
+.gdt-card-divider { background: #aaa; height: 1px; }
+.gdt-card-divider { grid-column-start: 1; grid-column-end: 3; }
 
 /** Pagemenu **/
 ul.pagination { margin: 8px; }
@@ -251,3 +253,6 @@ img.gdo-country { top: 5px; }
 
 /** Prism **/
 .line-numbers-rows > span { height: auto!important; }
+
+.alert p { margin-bottom: 0; 
+}
