@@ -7,6 +7,7 @@
   <?=$field->htmlIcon()?>
   <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
+   <?=$field->htmlAutocompleteOff()?>
    <?=$field->htmlID()?>
    class="form-control"
    type="text"
