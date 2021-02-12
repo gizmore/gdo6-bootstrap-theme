@@ -42,9 +42,10 @@ $result = $field->getResult();
 	<tr gdo-id="<?=$gdo->getID()?>">
 	  <?php foreach($headers as $gdoType) :
 	  if (!$gdoType->hidden) : 
-	  $col = $field->getField($gdoType->name);
-	  $gdoType = $col ? $col : $gdoType;
-	  $gdoType->gdo($gdo); ?>
+// 	  $col = $field->getField($gdoType->name);
+// 	  $gdoType = $col ? $col : $gdoType;
+// 	  $gdoType->gdo($gdo);
+	  ?>
 		<td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
 	  <?php endif; ?>
 	  <?php endforeach; ?>
