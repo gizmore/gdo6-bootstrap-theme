@@ -175,22 +175,10 @@ main .gdt-bar-row {
     height: calc(100vh - 95px);
 }
 
-/* .gdo-tblorder { */
-/* 	position: relative; */
-/* } */
-/* .gdo-tblorder a { */
-/*     position: relative; */
-/* } */
-/* .gdo-tblorder a + br + a { */
-/*     position: relative; */
-/* } */
-
-/* .gdo-tblorder .asc { */
-/* 	top: 30px; */
-/* } */
-
 .gdo-tblorder .asc,
 .gdo-tblorder .desc {
+	position: relative;
+	z-index: 100;
 	font-size: 22px;
 }
 
