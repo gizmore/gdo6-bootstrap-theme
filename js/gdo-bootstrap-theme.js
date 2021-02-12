@@ -17,7 +17,7 @@ $(document).ready(function () {
 			var c = a.parent().eq(0);
 			var href = anchor.href + '&ajax=1&fmt=json';
 			$.get(href).then(function(response){
-				var res = response.data.json.json;
+				var res = response.data.json;
 				c.attr('data-initial', a.attr('data-rating'));
 //				$('#'+res.outcomeId).find('.vote-count').html(res.count);
 //				$('#'+res.outcomeId).find('.vote-rating').html(res.rating);
