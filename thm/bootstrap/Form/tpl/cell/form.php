@@ -19,6 +19,7 @@
 <?php foreach ($form->fields as $field) : ?>
   <?= $field->renderForm(); ?>
 <?php endforeach; ?>
+  <?= $form->actions()->renderCell(); ?>
 </form>
 </div>
 <!-- End Form -->
