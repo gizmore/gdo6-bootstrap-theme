@@ -1,7 +1,7 @@
 <?php /** @var $link \GDO\UI\GDT_Link **/ ?>
 <span class="<?=$link->htmlClass()?>">
   <a
-   <?=$link->htmlName()?>
+   <?=$link->htmlID()?>
    <?=$link->htmlAttributes()?>
    <?=$link->htmlTarget()?>
    <?=$link->htmlHREF()?>
