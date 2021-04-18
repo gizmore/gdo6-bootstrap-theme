@@ -1,22 +1,11 @@
 <?php
 use GDO\Captcha\GDT_Captcha;
+use GDO\Core\GDT_Template;
 /** @var $field GDT_Captcha **/
 ?>
 <div class="form-group">
   <?=$field->htmlIcon()?>
   <label <?=$field->htmlForID()?>><?= t('captcha'); ?></label>
-  <input
-   <?=$field->htmlID()?>
-   autocomplete="off"
-   type="text"
-   pattern="[a-zA-Z]{5}"
-   required="required"
-   style="width:120px;"
-   <?=$field->htmlFormName()?>
-   value="<?= html($field->getVar()); ?>"/>
-  <img
-   class="gdo-captcha-img"
-   src="<?= $field->hrefCaptcha(); ?>"
-   onclick="this.src='<?= $field->hrefNewCaptcha(); ?>'+(new Date().getTime())" />
+  <?= GDT_Template::php('Captcha', 'form/captcha_inner.php', ['field' => $field])?>
   <?=$field->htmlError()?>
 </div>
