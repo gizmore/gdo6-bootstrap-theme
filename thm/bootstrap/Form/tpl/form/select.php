@@ -7,8 +7,9 @@
    data-width="100%"
    data-live-search="<?=count($field->choices) > 10 ? 'true' : 'false'?>"
    <?=$field->htmlFormName()?>
-   <?= $field->htmlRequired(); ?>
-   <?= $field->htmlDisabled(); ?>
+   <?=$field->htmlRequired()?>
+   <?=$field->htmlDisabled()?>
+   <?=$field->htmlMultiple()?>
    class="form-control">
     <?php if ($field->emptyLabel) : ?>
     <option
