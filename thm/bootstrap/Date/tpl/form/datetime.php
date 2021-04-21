@@ -10,7 +10,7 @@ $field instanceof GDT_DateTime;
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=$field->displayVar()?>"
-   type="text" />
+   <?=$field->htmlValue()?>
+   type="datetime" />
    <?=$field->htmlError()?>
 </div>

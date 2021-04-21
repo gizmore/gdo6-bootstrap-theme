@@ -9,8 +9,8 @@
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=$field->displayVar()?>" 
-   type="text" />
+   <?=$field->htmlValue()?>
+   type="date" />
    <?=$field->htmlError()?>
 </div>
  
