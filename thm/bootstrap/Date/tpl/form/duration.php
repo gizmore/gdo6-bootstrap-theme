@@ -6,6 +6,7 @@
    <?=$field->htmlID()?>
    class="form-control"
    type="text"
+   autocomplete="off"
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>

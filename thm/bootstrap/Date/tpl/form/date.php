@@ -9,8 +9,9 @@
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   <?=$field->htmlValue()?>
-   type="date" />
+   value="<?=tt($field->getVar(), 'day', '')?>"
+   autocomplete="off"
+   type="text" />
    <?=$field->htmlError()?>
 </div>
  
