@@ -6,6 +6,7 @@ use GDO\User\GDO_User;
 use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
 use GDO\Profile\GDT_ProfileLink;
+use GDO\Javascript\Module_Javascript;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
 $page->loadSidebars();
@@ -96,6 +97,6 @@ $page->loadSidebars();
  <?=GDT_Loading::make()->renderCell()?>
 
 <!-- JS finish -->
-<?= Javascript::displayJavascripts(Module_Core::instance()->cfgMinifyJS() === 'concat'); ?>
+<?= Javascript::displayJavascripts(Module_Javascript::instance()->cfgMinifyJS() === 'concat'); ?>
 </body>
 </html>

@@ -5,6 +5,7 @@ use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
 use GDO\Core\Application;
 use GDO\Bootstrap\Module_Bootstrap;
+use GDO\Javascript\Module_Javascript;
 
 /**
  * Bootstrap4 Theme.
@@ -29,7 +30,7 @@ final class Module_BootstrapTheme extends GDO_Module
 	    {
 	        $this->onIncludeBootstrap4();
 	        
-    		$min = Module_Core::instance()->cfgMinifyJS() === 'no' ? '' : '.min';
+    		$min = Module_Javascript::instance()->jsMinAppend();
     		
     		$this->addBowerCSS("bootstrap-slider/dist/css/bootstrap-slider$min.css");
     		$this->addBowerJavascript("bootstrap-slider/dist/bootstrap-slider$min.js");
