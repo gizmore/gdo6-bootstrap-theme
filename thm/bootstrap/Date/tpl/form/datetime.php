@@ -1,6 +1,4 @@
-<?php
-use GDO\Date\GDT_DateTime;
-$field instanceof GDT_DateTime;
+<?php /** @var $field \GDO\Date\GDT_DateTime **/
 ?>
 <div class="form-group <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
