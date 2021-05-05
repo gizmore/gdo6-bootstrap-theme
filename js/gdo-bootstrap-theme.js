@@ -4,7 +4,7 @@ $(function () {
 	window.GDO.Language = {
 		'switch': function(select) {
 			var curr = window.location.pathname + window.location.search;
-			var href = window.GWF_WEB_ROOT + "index.php?mo=Language&me=SwitchLanguage&ref=";
+			var href = window.GDO_WEB_ROOT + "index.php?mo=Language&me=SwitchLanguage&ref=";
 			href += encodeURIComponent(curr);
 			href += "&lang=" + $(select).val();
 			window.location.href = href;
@@ -17,7 +17,7 @@ $(function () {
 			var c = a.parent().eq(0);
 			var href = anchor.href + '&ajax=1&fmt=json';
 			$.get(href).then(function(response){
-				var res = response.data.json;
+				var res = response.json.data;
 				c.attr('data-initial', a.attr('data-rating'));
 //				$('#'+res.outcomeId).find('.vote-count').html(res.count);
 //				$('#'+res.outcomeId).find('.vote-rating').html(res.rating);

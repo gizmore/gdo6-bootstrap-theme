@@ -19,7 +19,7 @@ footer p {
 	text-decoration: none;
 }
 
-td.gdo-gdt_button a {
+td.gdt_button a {
     height: 36px;
     padding: 0px 8px;
     line-height: 36px;
@@ -61,7 +61,7 @@ div.gdt-image-button {
     vertical-align: inherit!important;
 }
 
-.gdt-dashboard .gdo-gdt_link {
+.gdt-dashboard .gdt_link {
 	width: 160px;
 	text-align: center;
 	background: aliceblue;
@@ -70,12 +70,12 @@ div.gdt-image-button {
 	margin-bottom: 4px;
 }
 
-.gdt-dashboard .gdo-gdt_link a {
+.gdt-dashboard .gdt_link a {
 	height: 160px;
 	vertical-align: middle;
 }
 
-.gdo-tblorder a.sel {
+.gdt-tblorder a.sel {
 	color: orange;
 }
 
@@ -143,13 +143,13 @@ main .gdt-bar-row {
 	border: 1px solid #eee;
 }
 
-.gdo-gdt_link a {
+.gdt_link a {
 	width: 100%;
 	height: 100%;
 	display: inline-block;
 }
 
-.gdo-gdt_link:hover {
+.gdt_link:hover {
 	background: #eee;
 }
 
@@ -175,8 +175,8 @@ main .gdt-bar-row {
     height: calc(100vh - 95px);
 }
 
-.gdo-tblorder .asc,
-.gdo-tblorder .desc {
+.gdt-tblorder .asc,
+.gdt-tblorder .desc {
 	position: relative;
 	z-index: 100;
 	font-size: 22px;
@@ -234,7 +234,7 @@ nav#sidebar img.gdo-language { vertical-align: baseline; }
 
 /** Panel **/
 .gdo-panel { padding: 16px; }
-/* .gdo-container { padding: 16px; } */
+/* .gdt-container { padding: 16px; } */
 
 /** Flags **/
 img.gdo-country { top: 5px; }
