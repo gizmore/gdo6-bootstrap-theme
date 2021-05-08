@@ -32,7 +32,7 @@ $page->loadSidebars();
     <div class="sidebar-content">
     
       <div class="sidebar-brand">
-        <a href="<?=href(GWF_MODULE, GWF_METHOD)?>"><?=sitename()?></a>
+        <a href="<?=href(GDO_MODULE, GDO_METHOD)?>"><?=sitename()?></a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>

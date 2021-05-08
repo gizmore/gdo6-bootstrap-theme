@@ -69,18 +69,18 @@ $(function () {
 	// Date
 	$('.gdt-datetime input').datetimepicker({
 		useCurrent: false,
-		locale: window.GWF_LANGUGE,
+		locale: window.GDO_LANGUGE,
 		format: window.GDO_TRANS.t('df_moment_long'),
 	});
 	
 	$('.gdt-date input').datetimepicker({
 		useCurrent: false,
-		locale: window.GWF_LANGUGE,
+		locale: window.GDO_LANGUGE,
 		format: window.GDO_TRANS.t('df_moment_day'),
 	});
 	
 	$('.gdt-birthdate input').datetimepicker({
-		locale: window.GWF_LANGUGE,
+		locale: window.GDO_LANGUGE,
 		format: window.GDO_TRANS.t('df_moment_day'),
 		viewMode: 'years',
 		maxDate: new Date(),
