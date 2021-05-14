@@ -25,8 +25,7 @@ $(function () {
 				window.GDO.Vote.hoverOut(anchor);
 				window.GDO.Vote.hoverIn(anchor);
 			}, function(response) {
-				console.log(response);
-				alert(response.responseJSON.error);
+				window.GDO.error(response);
 			})
 			return false;
 		},

@@ -9,7 +9,9 @@ use GDO\Javascript\Module_Javascript;
 /**
  * Bootstrap4 Theme.
  * 
- * Uses https://github.com/algolia/autocomplete.js/
+ * Uses @link https://github.com/algolia/autocomplete.js/
+ * 
+ * @TODO override js gdo error function to show a nice dialog with a nice stacktrace.
  * 
  * @author gizmore
  * @version 6.10.3
