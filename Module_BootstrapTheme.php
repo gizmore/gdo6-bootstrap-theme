@@ -2,7 +2,6 @@
 namespace GDO\BootstrapTheme;
 
 use GDO\Core\GDO_Module;
-use GDO\Core\Module_Core;
 use GDO\Core\Application;
 use GDO\Bootstrap\Module_Bootstrap;
 use GDO\Javascript\Module_Javascript;
@@ -13,8 +12,8 @@ use GDO\Javascript\Module_Javascript;
  * Uses https://github.com/algolia/autocomplete.js/
  * 
  * @author gizmore
- * @version 6.10
- * @since 6.08
+ * @version 6.10.3
+ * @since 6.8.0
  */
 final class Module_BootstrapTheme extends GDO_Module
 {

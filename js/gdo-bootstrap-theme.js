@@ -26,7 +26,7 @@ $(function () {
 				window.GDO.Vote.hoverIn(anchor);
 			}, function(response) {
 				console.log(response);
-				alert(response.responseJSON.data.error);
+				alert(response.responseJSON.error);
 			})
 			return false;
 		},
