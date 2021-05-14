@@ -1,4 +1,6 @@
-<?php /** @var $field \GDO\Table\GDT_Table **/
+<?php
+/** @var $field \GDO\Table\GDT_Table **/
+/** @var $form \GDO\Form\GDT_Form **/
 use GDO\Util\Common;
 $headers = $field->getHeaderFields();
 if ($pagemenu = $field->getPageMenu())
@@ -38,19 +40,30 @@ $result = $field->getResult();
 	  </tr>
 	</thead>
 	<tbody>
-	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
-	<tr gdo-id="<?=$gdo->getID()?>">
+	<?php if ($field->fetchInto) : ?>
+	<?php $dummy = $field->gdtTable->cache->getDummy(); ?>
+	<?php while ($gdo = $result->fetchInto($dummy)) : ?>
+	<tr data-gdo-id="<?=$gdo->getID()?>">
 	  <?php foreach($headers as $gdoType) :
 	  if (!$gdoType->hidden) : 
-// 	  $col = $field->getField($gdoType->name);
-// 	  $gdoType = $col ? $col : $gdoType;
-// 	  $gdoType->gdo($gdo);
 	  ?>
-		<td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
+		<td class="<?=$gdoType->htmlClass()?>"><?=$gdoType->gdo($gdo)->renderCell()?></td>
 	  <?php endif; ?>
 	  <?php endforeach; ?>
 	</tr>
 	<?php endwhile; ?>
+	<?php else : ?>
+	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
+	<tr data-gdo-id="<?=$gdo->getID()?>">
+	  <?php foreach($headers as $gdoType) :
+	  if (!$gdoType->hidden) : 
+	  ?>
+		<td class="<?=$gdoType->htmlClass()?>"><?=$gdoType->gdo($gdo)->renderCell()?></td>
+	  <?php endif; ?>
+	  <?php endforeach; ?>
+	</tr>
+	<?php endwhile; ?>
+	<?php endif; ?>
 	</tbody>
 	<tfoot>
 	  <?=$field->actions()->render()?>

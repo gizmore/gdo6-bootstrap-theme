@@ -96,6 +96,7 @@ $(function () {
 		// switch hidden field
 		var name = datajson.name;
 		var hidden = $('#gdo-autocomplete-id-'+name);
+		var hidden2 = $('#nocompletion_'+name);
 		hidden.attr('name', input.attr('name'));
 		input.removeAttr('name');
 		hidden.val(input.val());
@@ -106,6 +107,14 @@ $(function () {
 		else {
 			input.val(datajson.selected.text)
 		}
+		
+		input.on('keydown.aa keypress.aa cut.aa paste.aa', function($e) {
+			setTimeout(function(){
+				hidden.val(input.val());
+				hidden2.val('1');
+			});
+		});
+		
 		input.autocomplete({
 		}, [
 			{
@@ -124,15 +133,11 @@ $(function () {
 				}
 			}
 		]).on('autocomplete:selected', function(event, suggestion, dataset, context) {
-//			var name = $(event.target).attr('data-gdt-name');
-//			var hidden = $('#gdo-autocomplete-id-'+name);
 			hidden.val(suggestion.id);
+			hidden2.val('0');
 		});
 	});
-	
-});
 
-$(function() {
 	$(".sidebar-dropdown > a").click(function() {
 		$(".sidebar-submenu").slideUp(200);
 		if ($(this).parent().hasClass("active")) {
@@ -162,4 +167,7 @@ $(function() {
 	// Visible
 	$('.page-wrapper').removeClass('n');
 	
+	// Focus first form field
+	$('#' + window.GDO_FIRST_EDITABLE_FIELD).focus();
+
 });
