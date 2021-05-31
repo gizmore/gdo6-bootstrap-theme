@@ -1,7 +1,6 @@
 <?php /** @var $page \GDO\UI\GDT_Page **/
 use GDO\Core\Website;
 use GDO\Util\Javascript;
-use GDO\Core\Module_Core;
 use GDO\User\GDO_User;
 use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
@@ -9,7 +8,6 @@ use GDO\Profile\GDT_ProfileLink;
 use GDO\Javascript\Module_Javascript;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
-$page->loadSidebars();
 ?>
 <!DOCTYPE html>
 <html>
