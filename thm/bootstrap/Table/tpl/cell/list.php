@@ -24,13 +24,21 @@ if ($field->ordered)
 {
     if ($field->headers)
     {
+        $o = $field->headers->name;
+        $ob = @$_REQUEST[$o]['order_by'];
+        $od = @$_REQUEST[$o]['order_dir'];
+        
         $menu = GDT_Menu::make('order');
         foreach ($field->headers->fields as $gdt)
         {
             if ($gdt->orderable)
             {
                 $link = GDT_Link::make()->labelRaw($gdt->displayLabel());
-                $o = $field->headers->name;
+                
+                if ($gdt->name === $ob)
+                {
+                    $menu->label('list_order', [$gdt->displayLabel(), t(strtolower(html($od)))]);
+                }
                 $href = $field->replacedHREF("{$o}[order_by]", $gdt->name);
                 $href = $field->replacedHREF("{$o}[order_dir]", $gdt->orderDefaultAsc ? 'ASC' : 'DESC', $href);
                 $link->href($href);

@@ -114,11 +114,6 @@ button.gdo-icon {
 	border: none;
 }
 
-.dropdown-menu > * {
-	display: block;
-	text-align: left;
-}
-
 img.gdt-file-image-preview,
 .gdo-file-preview img {
 	max-width: 64px;
@@ -180,15 +175,15 @@ main .gdt-bar-row {
     height: calc(100vh - 95px);
 }
 
+/** Tables **/
 .gdt-tblorder .asc,
-.gdt-tblorder .desc {
-	position: relative;
-	z-index: 100;
-	font-size: 22px;
-}
+.gdt-tblorder .desc { position: relative; z-index: 100; font-size: 22px; }
+.gdt-table h3 { border: 1px solid #ddd; padding: 8px 16px; margin-top: 8px; }
 
 /** Forms **/
 .form-group { position: relative; }
+.gdo-form { border: 1px solid #ddd; padding: 16px; }
+.gdo-form .gdt_link { padding-bottom: 16px; }
 
 /** Lists **/
 .gdt-list h3 { border-top: 1px solid #333; font-size: 22px; background: #bbf; padding: 4px 8px; }
@@ -198,12 +193,15 @@ main .gdt-bar-row {
 .gdt-li-subtitle { font-size: 15px; flex-grow: 1; line-height: 28px; }
 .gdt-li-subtitle > * { min-height: 28px; }
 .gdt-li-title-texts { display: flex; flex-direction: column; flex-grow: 1; }
-/* .gdt-li-main { display: flex; flex-direction: row; padding: 4px 8px; } */
 .gdt-list-item p { margin-bottom: 0; }
 .gdt-li-image, .gdt-li-avatar { align-self: center; margin-right: 4px; }
 .gdt-li-lower { border-top: 1px solid #bbb; font-size: 14px; }
 .gdt-li-subtext { padding: 2px 8px; }
 .gdt-list-item:last-child { border-bottom: 1px solid #333; }
+
+/** Menu **/
+.dropdown-menu .gdt_link a { padding: 4px 8px; }
+.dropdown-menu > * { display: block; text-align: left; }
 
 /** Cards **/
 .gdo-list-card > .title { padding: 4px 8px 2px; font-size: 20px; background: #ddf; border-bottom: 1px solid #333; }
@@ -236,10 +234,13 @@ nav#sidebar .dropdown { padding: 0; margin: 0; margin-left: 16px; }
 .sidebar-wrapper .sidebar-header { padding: 0; margin: 0; }
 .sidebar-wrapper .sidebar-header .user-pic { width: auto; }
 nav#sidebar img.gdo-language { vertical-align: baseline; }
+nav#sidebar .sidebar-menu .gdt_link { color: #ddd; }
+nav#sidebar .sidebar-menu .gdt_link:hover { color: #000; }
+nav#sidebar .sidebar-menu .gdt_link a { color: inherit; }
 
 /** Panel **/
-.gdo-panel { padding: 16px; }
-/* .gdt-container { padding: 16px; } */
+.gdt-panel { padding: 0px; border: 1px solid #eee; }
+.gdt-panel h3 { padding: 16px 16px 0; margin-bottom: 0px; }
 
 /** Flags **/
 img.gdo-country { top: 5px; }

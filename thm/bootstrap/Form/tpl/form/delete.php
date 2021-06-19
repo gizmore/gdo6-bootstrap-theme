@@ -3,6 +3,6 @@
  type="submit"
  onclick="return confirm('<?=t('confirm_delete')?>')"
  class="btn btn-secondary"
- name="<?= $field->name; ?>"
- value="<?= $field->displayLabel(); ?>"
- <?= $field->htmlDisabled(); ?> /></input>
+ <?=$field->htmlFormName()?>
+ value="<?=$field->displayLabel()?>"
+ <?=$field->htmlDisabled()?> /></input>
