@@ -167,6 +167,8 @@ $(function () {
 	$('.page-wrapper').removeClass('n');
 	
 	// Focus first form field
-	$('#' + window.GDO_FIRST_EDITABLE_FIELD).focus();
+	if (window.GDO_FIRST_EDITABLE_FIELD) {
+		$('#' + window.GDO_FIRST_EDITABLE_FIELD).focus();
+	}
 
 });

@@ -22,7 +22,7 @@ $user = GDO_User::current();
 </head>
 <body>
 
- <div class="page-wrapper chiller-theme n" style="min-height: 100vh;">
+ <div id="gdo-pagewrap" class="page-wrapper chiller-theme n" style="min-height: 100vh;">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
   </a>
