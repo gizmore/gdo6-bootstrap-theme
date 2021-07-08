@@ -3,17 +3,17 @@ footer p {
 	margin: 0;
 }
 
-.gdt-button {
-	padding: 0px 8px;
-	height: 34px;
-	line-height: 30px;
-	border: 1px solid #fff;
-}
+/* .gdt-button { */
+/* 	padding: 0px 8px; */
+/* 	height: 34px; */
+/* 	line-height: 30px; */
+/* 	border: 1px solid #fff; */
+/* } */
 .gdt-button > a {
 	color: inherit;
 	display: block;
-	padding: 0.375rem 0.375rem;
-	line-height: 18px;
+/* 	padding: 0.375rem 0.375rem; */
+/* 	line-height: 18px; */
 }
 .gdt-button > a:HOVER {
 	text-decoration: none;
@@ -106,10 +106,6 @@ button.gdt-file-remove {
 	color: #e00;
 }
 
-img.gdo-country {
-	top: -1px;
-}
-
 button.gdo-icon {
 	border: none;
 }
@@ -184,6 +180,7 @@ main .gdt-bar-row {
 .form-group { position: relative; }
 .gdo-form { border: 1px solid #ddd; padding: 16px; }
 .gdo-form .gdt_link { padding-bottom: 16px; }
+input[disabled]:hover { cursor: not-allowed; }
 
 /** Lists **/
 .gdt-list h3 { border-top: 1px solid #333; font-size: 22px; background: #bbf; padding: 4px 8px; }
@@ -242,11 +239,7 @@ nav#sidebar .sidebar-menu .gdt_link a { color: inherit; }
 .gdt-panel { padding: 0px; border: 1px solid #eee; }
 .gdt-panel h3 { padding: 16px 16px 0; margin-bottom: 0px; }
 
-/** Flags **/
-img.gdo-country { top: 5px; }
-
 /** Prism **/
 .line-numbers-rows > span { height: auto!important; }
 
-.alert p { margin-bottom: 0; 
-}
+.alert p { margin-bottom: 0; }

@@ -1,7 +1,7 @@
 <?php
 /** @var $field \GDO\Date\GDT_Date **/
 ?>
-<div class="form-group <?=$field->classError()?>">
+<div class="form-group gdt-date <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
   <input
@@ -9,7 +9,7 @@
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=tt($field->getVar(), 'day', '')?>"
+   value="<?=$field->displayVar()?>"
    autocomplete="off"
    type="text" />
    <?=$field->htmlError()?>

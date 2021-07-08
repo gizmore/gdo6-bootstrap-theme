@@ -1,6 +1,8 @@
-<?php /** @var $field \GDO\Date\GDT_DateTime **/
+<?php
+use GDO\Date\Time;
+/** @var $field \GDO\Date\GDT_DateTime **/
 ?>
-<div class="form-group <?=$field->classError()?>">
+<div class="form-group gdt-datetime <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
   <input
@@ -8,8 +10,8 @@
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=tt($field->getVar(), 'parse')?>"
+   value="<?=Time::displayDate($field->getVar(), 'local')?>"
    autocomplete="off"
-   type="text" />
+   type="datetime-local" />
    <?=$field->htmlError()?>
 </div>

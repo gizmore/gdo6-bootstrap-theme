@@ -16,7 +16,7 @@ $votesHave = $gdo->getVoteCount();
 $enough = $votesHave >= $votesNeeded;
 
 echo '<span>';
-echo GDT_Icon::make()->icon('trophy')->color('gold')->render();
+echo GDT_Icon::make()->icon('trophy')->iconColor('gold')->render();
 echo "&nbsp;";
 echo '<span id="'.$idOutcome.'">';
 if ($enough)

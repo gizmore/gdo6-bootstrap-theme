@@ -14,7 +14,7 @@ $max = $vt->gdoVoteMax();
 <?php
 for ($i = 1; $i <= $max; $i++) :
 $color = $own < $i ? '#999' : '#ffd700';
-$icon = GDT_Icon::make()->icon('star')->color($color)->render();
+$icon = GDT_Icon::make()->icon('star')->iconColor($color)->render();
 ?>
 <a
  rel="nofollow"
