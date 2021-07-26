@@ -6,8 +6,11 @@ use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
 use GDO\Profile\GDT_ProfileLink;
 use GDO\Javascript\Module_Javascript;
+use GDO\Core\Application;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
+$method = Application::instance()->getMethod();
+$sidebar = $method->showSidebar();
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,10 +24,15 @@ $user = GDO_User::current();
 </head>
 <body>
 
- <div id="gdo-pagewrap" class="page-wrapper chiller-theme n" style="min-height: 100vh;">
+ <div id="gdo-pagewrap" class="page-wrapper chiller-theme n <?=$sidebar?'with-sidebar':'no-sidebar'?>" style="min-height: 100vh;">
+
+<?php if ($sidebar) : ?>
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
   </a>
+<?php endif; ?>
+  
+<?php if ($sidebar) : ?>
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
     
@@ -78,7 +86,7 @@ $user = GDO_User::current();
     </div>
     <!-- sidebar-content  -->
   </nav>
-
+<?php endif; ?>
 
   <!-- sidebar-wrapper  -->
   <div class="d-flex flex-column" style="min-height: 100vh;">

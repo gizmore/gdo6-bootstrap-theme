@@ -93,17 +93,17 @@ html { height: 100%; }
 }
 
 @media screen and (min-width: 768px) {
-  .page-wrapper.toggled .page-content {
+  .with-sidebar .page-wrapper.toggled .page-content {
     padding-left: 300px;
     padding-right: 32px;
     padding-bottom: 32px;
     padding-top: 32px;
   }
-  .page-wrapper.toggled footer {
+  .with-sidebar .page-wrapper.toggled footer {
     padding-left: 260px;
   }
   
-  .page-wrapper.toggled nav.navbar {
+  .with-sidebar .page-wrapper.toggled nav.navbar {
     padding-left: 260px;
   }
 }
