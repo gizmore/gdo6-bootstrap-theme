@@ -22,9 +22,9 @@ $sidebar = $method->showSidebar();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=$page->renderTitle()?></title>
 </head>
-<body>
+<body class="<?=$sidebar?'with-sidebar':'no-sidebar'?>">
 
- <div id="gdo-pagewrap" class="page-wrapper chiller-theme n <?=$sidebar?'with-sidebar':'no-sidebar'?>" style="min-height: 100vh;">
+ <div id="gdo-pagewrap" class="page-wrapper chiller-theme n" style="min-height: 100vh;">
 
 <?php if ($sidebar) : ?>
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
