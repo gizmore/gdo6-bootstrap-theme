@@ -19,14 +19,14 @@ footer p {
 	text-decoration: none;
 }
 
-td.gdt_button a {
+td.gdt-button a {
     height: 36px;
     padding: 0px 8px;
     line-height: 36px;
 }
 
-td.gdt_moduleadminbutton,
-td.gdt_button {
+td.gdt-moduleadminbutton,
+td.gdt-button {
 	padding: 5px;
 }
 
@@ -66,7 +66,7 @@ div.gdt-image-button {
     vertical-align: inherit!important;
 }
 
-.gdt-dashboard .gdt_link {
+.gdt-dashboard .gdt-link {
 	width: 160px;
 	text-align: center;
 	background: aliceblue;
@@ -75,7 +75,7 @@ div.gdt-image-button {
 	margin-bottom: 4px;
 }
 
-.gdt-dashboard .gdt_link a {
+.gdt-dashboard .gdt-link a {
 	height: 160px;
 	vertical-align: middle;
 }
@@ -139,13 +139,13 @@ main .gdt-bar-row {
 	border: 1px solid #eee;
 }
 
-.gdt_link a {
+.gdt-link a {
 	width: 100%;
 	height: 100%;
 	display: inline-block;
 }
 
-.gdt_link:hover {
+.gdt-link:hover {
 	background: #eee;
 }
 
@@ -179,7 +179,7 @@ main .gdt-bar-row {
 /** Forms **/
 .form-group { position: relative; }
 .gdo-form { border: 1px solid #ddd; padding: 16px; }
-.gdo-form .gdt_link { padding-bottom: 16px; }
+.gdo-form .gdt-link { padding-bottom: 16px; }
 input[disabled]:hover { cursor: not-allowed; }
 
 /** Lists **/
@@ -197,7 +197,7 @@ input[disabled]:hover { cursor: not-allowed; }
 .gdt-list-item:last-child { border-bottom: 1px solid #333; }
 
 /** Menu **/
-.dropdown-menu .gdt_link a { padding: 4px 8px; }
+.dropdown-menu .gdt-link a { padding: 4px 8px; }
 .dropdown-menu > * { display: block; text-align: left; }
 
 /** Cards **/
@@ -231,9 +231,9 @@ nav#sidebar .dropdown { padding: 0; margin: 0; margin-left: 16px; }
 .sidebar-wrapper .sidebar-header { padding: 0; margin: 0; }
 .sidebar-wrapper .sidebar-header .user-pic { width: auto; }
 nav#sidebar img.gdo-language { vertical-align: baseline; }
-nav#sidebar .sidebar-menu .gdt_link { color: #ddd; }
-nav#sidebar .sidebar-menu .gdt_link:hover { color: #000; }
-nav#sidebar .sidebar-menu .gdt_link a { color: inherit; }
+nav#sidebar .sidebar-menu .gdt-link { color: #ddd; }
+nav#sidebar .sidebar-menu .gdt-link:hover { color: #000; }
+nav#sidebar .sidebar-menu .gdt-link a { color: inherit; }
 
 /** Panel **/
 .gdt-panel { padding: 0px; border: 1px solid #eee; }

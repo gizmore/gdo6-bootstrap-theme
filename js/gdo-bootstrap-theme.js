@@ -64,23 +64,25 @@ $(function () {
 		$('#sidebar').toggleClass('active');
 		$('#wrapSidebar').toggleClass('leftActive');
 	});
-	
+
 	// Date
+	let conv = window.GDO.Moment.convertFormat;
+
 	$('.gdt-datetime input').datetimepicker({
 		useCurrent: false,
 		locale: window.GDO_LANGUAGE,
-		format: window.GDO_TRANS.t('df_long'),
+		format: conv(window.GDO_TRANS.t('df_long')),
 	});
 	
-	$('.gdt-date input').datetimepicker({
+	$('.gdt-date:not(.gdt-birthdate) input').datetimepicker({
 		useCurrent: false,
 		locale: window.GDO_LANGUAGE,
-		format: window.GDO_TRANS.t('df_day'),
+		format: conv(window.GDO_TRANS.t('df_day')),
 	});
 	
 	$('.gdt-birthdate input').datetimepicker({
 		locale: window.GDO_LANGUAGE,
-		format: window.GDO_TRANS.t('df_day'),
+		format: conv(window.GDO_TRANS.t('df_day')),
 		viewMode: 'years',
 		maxDate: new Date(),
 		useCurrent: false
