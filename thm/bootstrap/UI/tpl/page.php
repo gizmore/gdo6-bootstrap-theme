@@ -90,8 +90,16 @@ $sidebar = $method->showSidebar();
 
   <!-- sidebar-wrapper  -->
   <div class="d-flex flex-column" style="min-height: 100vh;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"><?=$page->topNav->render()?></nav>
-    <main class="page-content flex-fill"><?=$page->topTabs->render()?><?=Website::renderTopResponse()?> <?=$page->html?></main>
+<?php if ($sidebar) : ?>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <?=$page->topNav->render()?>
+    </nav>
+<?php endif; ?>
+    <main class="page-content flex-fill">
+      <?=$page->topTabs->render()?>
+      <?=Website::renderTopResponse()?>
+      <?=$page->html?>
+    </main>
     <footer class="page-footer font-small blue"><?=$page->bottomNav->render()?></footer>
   </div>
   <!-- page-content" -->
