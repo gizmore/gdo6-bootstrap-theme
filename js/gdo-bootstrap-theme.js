@@ -160,13 +160,8 @@ $(function () {
 		$(".page-wrapper").addClass("toggled");
 	});
 	
-	// init
-	if ($(document).width() > 800) {
-		$(".page-wrapper").addClass("toggled");
-	}
-	
 	// Visible
-	$('.page-wrapper').removeClass('n');
+/*	$('.page-wrapper').removeClass('n'); */
 	
 	// Focus first form field
 	if (window.GDO_FIRST_EDITABLE_FIELD) {

@@ -12,11 +12,12 @@ $languages = Module_Language::instance()->cfgSupported();
 foreach ($languages as $language) :
 $language instanceof GDO_Language;
 $sel = Trans::$ISO === $language->getISO() ? ' selected="selected"' : '';
+$href = GDO_WEB_ROOT . "GDO/Language/img/{$language->getID()}.png";
 $icon = <<<END
   <img
    class="gdo-language"
    alt="{$language->displayName()}"
-   src="GDO/Language/img/{$language->getID()}.png" />
+   src="{$href}" />
   {$language->displayName()}
 END;
 printf("<option data-content='%s' value=\"%s\"%s>%s</option>",

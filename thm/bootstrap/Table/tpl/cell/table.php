@@ -14,8 +14,10 @@ $result = $field->getResult();
 <?php if (!$form) : ?>
 <form method="get" action="<?=$field->href?>" class="b">
 <?php endif; ?>
+<?php if (!GDO_SEO_URLS) : ?>
   <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />
+<?php endif; ?>
   <?php if ($field->hasTitle()) : ?>
   <h3><?= $field->renderTitle(); ?></h3>
   <?php endif; ?>

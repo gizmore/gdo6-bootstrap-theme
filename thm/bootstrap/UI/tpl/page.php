@@ -6,6 +6,7 @@ use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
 use GDO\Profile\GDT_ProfileLink;
 use GDO\Javascript\Module_Javascript;
+use GDO\Language\Trans;
 use GDO\Core\Application;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
@@ -13,7 +14,7 @@ $method = Application::instance()->getMethod();
 $sidebar = $method->showSidebar();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="<?=Trans::$ISO?>">
 <head>
   <?= Website::displayHead(); ?>
   <?= Website::displayMeta(); ?>
@@ -24,7 +25,20 @@ $sidebar = $method->showSidebar();
 </head>
 <body class="<?=$sidebar?'with-sidebar':'no-sidebar'?>">
 
- <div id="gdo-pagewrap" class="page-wrapper chiller-theme" style="min-height: 100vh;">
+<script>
+const w = Math.max(
+    document.documentElement["clientWidth"],
+    document.body["scrollWidth"],
+    document.documentElement["scrollWidth"],
+    document.body["offsetWidth"],
+    document.documentElement["offsetWidth"]
+);
+if (w >= 1024) {
+    document.write('<div id="gdo-pagewrap" class="page-wrapper chiller-theme toggled" style="min-height: 100vh;">');
+} else {
+    document.write('<div id="gdo-pagewrap" class="page-wrapper chiller-theme" style="min-height: 100vh;">');
+}
+</script>
 
 <?php if ($sidebar) : ?>
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -95,7 +109,7 @@ $sidebar = $method->showSidebar();
       <?=$page->topNav->render()?>
     </nav>
 <?php endif; ?>
-    <main class="page-content flex-fill">
+    <main class="page-content flex-fill gdo6-<?=strtolower(mo())?>-<?=strtolower(me())?>">
       <?=$page->topTabs->render()?>
       <?=Website::renderTopResponse()?>
       <?=$page->html?>
