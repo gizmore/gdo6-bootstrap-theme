@@ -129,7 +129,7 @@ $(function () {
 				},
 				source: function name(query, callback) {
 					$.get(datajson.completionHref + "&query=" + encodeURIComponent(query)).then(function(result){
-						callback(result.json);
+						callback(result.json.data);
 					});
 				}
 			}
