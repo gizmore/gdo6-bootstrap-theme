@@ -15,7 +15,7 @@ $(function () {
 		'vote': function(anchor) {
 			var a = $(anchor);
 			var c = a.parent().eq(0);
-			var href = anchor.href + '&ajax=1&fmt=json';
+			var href = anchor.href + '&_ajax=1&_fmt=json';
 			$.get(href).then(function(response){
 				var res = response.json.data;
 				c.attr('data-initial', a.attr('data-rating'));
