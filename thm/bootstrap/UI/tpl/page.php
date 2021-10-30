@@ -10,8 +10,11 @@ use GDO\Language\Trans;
 use GDO\Core\Application;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
-$method = Application::instance()->getMethod();
-$sidebar = $method->showSidebar();
+$sidebar = true;
+if ($method = Application::instance()->getMethod())
+{
+    $sidebar = $method->showSidebar();
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?=Trans::$ISO?>">
