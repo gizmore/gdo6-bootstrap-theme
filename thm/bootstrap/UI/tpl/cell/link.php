@@ -4,6 +4,11 @@
    <?=$link->htmlID()?>
    <?=$link->htmlAttributes()?>
    <?=$link->htmlTarget()?>
-   <?=$link->htmlHREF()?>
-   href="<?=html($link->href)?>"><?=$link->htmlIcon()?><?=$link->displayLabel()?></a>
+   <?=$link->htmlHREF()?>><?=$link->htmlIcon()?>
+<?php if ($link->hasLabel()) : ?>
+   <?=$link->displayLabel()?>
+<?php else : ?>
+   <?=html($link->href)?>
+<?php endif; ?>
+   </a>
 </span>

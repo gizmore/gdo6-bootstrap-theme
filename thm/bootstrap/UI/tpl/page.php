@@ -1,6 +1,6 @@
 <?php /** @var $page \GDO\UI\GDT_Page **/
 use GDO\Core\Website;
-use GDO\Util\Javascript;
+use GDO\Javascript\Javascript;
 use GDO\User\GDO_User;
 use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
