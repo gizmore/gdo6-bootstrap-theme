@@ -7,10 +7,10 @@
   <?=$field->htmlIcon()?>
   <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
-   <?=$field->htmlAutocompleteOff()?>
-   <?=$field->htmlID()?>
-   class="form-control"
    type="text"
+   <?=$field->htmlID()?>
+   <?=$field->htmlAutocompleteOff()?>
+   class="form-control gdo-autocomplete-input"
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
