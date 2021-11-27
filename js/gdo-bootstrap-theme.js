@@ -128,7 +128,7 @@ $(function () {
 					}
 				},
 				source: function name(query, callback) {
-					$.get(datajson.completionHref + "&query=" + encodeURIComponent(query)).then(function(result){
+					$.get(datajson.completionHref + "&_fmt=json&query=" + encodeURIComponent(query)).then(function(result){
 						callback(result.json.data);
 					});
 				}

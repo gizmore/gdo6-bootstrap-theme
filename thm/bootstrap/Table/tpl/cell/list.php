@@ -1,6 +1,7 @@
 <?php
 use GDO\Table\GDT_List;
 use GDO\Form\GDT_Form;
+use GDO\Form\GDT_Submit;
 use GDO\UI\GDT_SearchField;
 use GDO\UI\GDT_Menu;
 use GDO\UI\GDT_Link;
@@ -14,6 +15,7 @@ if ($field->searched)
 {
     $formSearch = GDT_Form::make($field->headers->name)->slim()->methodGET();
     $formSearch->addField(GDT_SearchField::make('search'));
+    $formSearch->actions()->addField(GDT_Submit::make()->css('display', 'none'));
     echo $formSearch->render();
 }
 
