@@ -4,9 +4,9 @@ use GDO\UI\GDT_Toolbar;
 ?>
 <div class="btn-toolbar" role="toolbar">
 <?php
-foreach ($field->getFields() as $gdoType)
+foreach ($field->getFields() as $gdt)
 {
-	echo $gdoType->renderCell();
+	echo $gdt->renderCell();
 }
 ?>
 </div>

@@ -7,8 +7,8 @@ use GDO\UI\GDT_Icon;
     <?=$field->displayLabel()?>
   </button>
   <div class="dropdown-menu">
-<?php foreach ($field->getFields() as $gdoType) : ?>
-	<?=$gdoType->renderCell()?>
+<?php foreach ($field->getFields() as $gdt) : ?>
+	<?=$gdt->renderCell()?>
 <?php endforeach; ?>
   </div>
 </div>
