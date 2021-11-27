@@ -4,7 +4,7 @@ use GDO\File\GDT_File;
 ?>
 
 <?php foreach ($field->getInitialFiles() as $file) : ?>
-<?php $deleteButton = $field->noDelete ? '' : sprintf('<input type="submit" name="delete_%s[%s]" value="Remove File" onclick="return confirm(\'%s\')" />', $field->name, $file->getID(), t('confirm_delete')); ?>
+<?php $deleteButton = $field->noDelete ? '' : sprintf('<input type="submit" name="%s[delete_%s][%s]" value="Remove File" onclick="return confirm(\'%s\')" />', $field->formVariable(), $field->name, $file->getID(), t('confirm_delete')); ?>
 <div id="gdo-file-preview-<?=$file->getID()?>" class="form-group">
 <?php if ($file && $file->isImageType()) : ?>
 <?php if ($file->isImageType()) : ?>
