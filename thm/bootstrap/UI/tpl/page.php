@@ -117,7 +117,9 @@ if (w >= 1024) {
       <?=Website::renderTopResponse()?>
       <?=$page->html?>
     </main>
+<?php if ($sidebar) : ?>
     <footer class="page-footer font-small blue"><?=$page->bottomNav->render()?></footer>
+<?php endif; ?>
   </div>
   <!-- page-content" -->
 
