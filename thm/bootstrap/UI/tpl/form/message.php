@@ -10,7 +10,7 @@
    class="<?=$field->classEditor()?> form-control"
    <?=$field->htmlFormName()?>
    rows="6"
-   <?= $field->htmlDisabled(); ?>><?= $field->displayVar(); ?></textarea>
+   <?= $field->htmlDisabled(); ?>><?= $field->display(); ?></textarea>
  </div>
  <?=$field->htmlError()?>
 </div>

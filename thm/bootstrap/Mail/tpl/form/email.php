@@ -11,7 +11,7 @@ $field instanceof GDT_Email;
    class="form-control"
    type="email"
    <?=$field->htmlFormName()?>
-   value="<?= $field->displayVar(); ?>"
+   value="<?= $field->display(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?> />
   <?= $field->htmlError(); ?>

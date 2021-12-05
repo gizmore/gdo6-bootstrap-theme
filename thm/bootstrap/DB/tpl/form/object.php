@@ -13,6 +13,6 @@
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=$field->displayVar()?>" />
+   value="<?=$field->display()?>" />
   <?= $field->htmlError(); ?>
 </div>

@@ -14,7 +14,7 @@
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=$field->displayVar()?>" />
+   value="<?=$field->display()?>" />
   <input type="hidden" id="nocompletion_<?=$field->name?>" name="nocompletion_<?=$field->name?>" value="1" />
   <input type="hidden" id="gdo-autocomplete-id-<?=$field->name?>" />
   <?= $field->htmlError(); ?>
