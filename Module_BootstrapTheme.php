@@ -31,7 +31,7 @@ final class Module_BootstrapTheme extends GDO_Module
 	    {
 	        $this->onIncludeBootstrap4();
 	        
-    		$min = Module_Javascript::instance()->jsMinAppend();
+    		$min = Module_Javascript::instance()->cfgMinAppend();
     		
     		$this->addBowerCSS("bootstrap-slider/dist/css/bootstrap-slider$min.css");
     		$this->addBowerJS("bootstrap-slider/dist/bootstrap-slider$min.js");
