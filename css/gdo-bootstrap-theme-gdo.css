@@ -175,6 +175,7 @@ main .gdt-bar-row {
 .gdt-tblorder .asc,
 .gdt-tblorder .desc { position: relative; z-index: 100; font-size: 22px; }
 .gdt-table h3 { border: 1px solid #ddd; padding: 8px 16px; margin-top: 8px; }
+.gdt-table .gdt-button { padding: 4px; }
 
 /** Forms **/
 .form-group { position: relative; }

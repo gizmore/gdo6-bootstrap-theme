@@ -2,7 +2,7 @@
 use GDO\Date\Time;
 /** @var $field \GDO\Date\GDT_DateTime **/
 ?>
-<div class="form-group gdt-datetime <?=$field->classError()?>">
+<div class="form-group <?=$field->htmlClass()?> <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <label><?= $field->displayLabel(); ?></label>
   <input
@@ -10,7 +10,7 @@ use GDO\Date\Time;
    <?=$field->htmlFormName()?>
    <?=$field->htmlDisabled()?>
    <?=$field->htmlRequired()?>
-   value="<?=Time::displayDate($field->getVar(), 'local')?>"
+   value="<?=Time::displayDateTime(Time::parseDateTimeDB($field->getVar()), 'local', '')?>"
    autocomplete="off"
    type="datetime-local" />
    <?=$field->htmlError()?>

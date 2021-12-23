@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+
 $(function() {
 	
 	window.GDO.error = function(html, title) {
@@ -105,7 +106,19 @@ $(function() {
 		format: conv(window.GDO_TRANS.t('df_long')),
 	});
 	
-	$('.gdt-date:not(.gdt-birthdate) input').datetimepicker({
+	$('.gdt-date input').datetimepicker({
+		useCurrent: false,
+		locale: window.GDO_LANGUAGE,
+		format: conv(window.GDO_TRANS.t('df_day')),
+	});
+	
+	$('.gdt-week input').datetimepicker({
+		useCurrent: false,
+		locale: window.GDO_LANGUAGE,
+		format: conv(window.GDO_TRANS.t('df_day')),
+	});
+	
+	$('.gdt-month input').datetimepicker({
 		useCurrent: false,
 		locale: window.GDO_LANGUAGE,
 		format: conv(window.GDO_TRANS.t('df_day')),
@@ -190,9 +203,6 @@ $(function() {
 	$("#show-sidebar").click(function() {
 		$(".page-wrapper").addClass("toggled");
 	});
-	
-	// Visible
-/*	$('.page-wrapper').removeClass('n'); */
 	
 	// Focus first form field
 	if (window.GDO_FIRST_EDITABLE_FIELD) {
