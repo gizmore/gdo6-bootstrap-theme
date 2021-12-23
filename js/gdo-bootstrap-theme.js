@@ -1,5 +1,5 @@
 "use strict"
-$(function () {
+$(function() {
 	
 	window.GDO.error = function(html, title) {
 		let ok = t('btn_ok');
@@ -23,7 +23,13 @@ $(function () {
     </div>
   </div>
 </div>`;
-		return $(modal).modal();
+		let defer = $.Deferred();
+		let dialog = $(modal);
+		dialog.modal().on('hidden.bs.modal', function() {
+			dialog.remove();
+			defer.resolve();
+		});
+		return defer.promise();
 	};
 
 	window.GDO.Language = {

@@ -242,4 +242,5 @@ nav#sidebar .sidebar-menu .gdt-link a { color: inherit; }
 /** Prism **/
 .line-numbers-rows > span { height: auto!important; }
 
+/** Dialogs **/
 .alert p { margin-bottom: 0; }
