@@ -6,7 +6,7 @@ $(function () {
 			var curr = window.location.pathname + window.location.search;
 			var href = window.GDO_WEB_ROOT + "index.php?mo=Language&me=SwitchLanguage&ref=";
 			href += encodeURIComponent(curr);
-			href += "&lang=" + $(select).val();
+			href += "&_lang=" + $(select).val();
 			window.location.href = href;
 		}
 	};

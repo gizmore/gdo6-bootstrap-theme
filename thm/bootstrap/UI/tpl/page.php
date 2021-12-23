@@ -115,7 +115,7 @@ if (w >= 1024) {
     <main class="page-content flex-fill gdo6-<?=strtolower(mo())?>-<?=strtolower(me())?>">
       <?=$page->topTabs->render()?>
       <?=Website::renderTopResponse()?>
-      <div><?=$page->html?></div>
+      <?=$page->html?>
     </main>
 <?php if ($sidebar) : ?>
     <footer class="page-footer font-small blue"><?=$page->bottomNav->render()?></footer>
