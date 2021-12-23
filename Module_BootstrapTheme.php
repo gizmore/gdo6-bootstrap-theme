@@ -14,7 +14,7 @@ use GDO\Javascript\Module_Javascript;
  * @TODO override js gdo error function to show a nice dialog with a nice stacktrace.
  * 
  * @author gizmore
- * @version 6.10.3
+ * @version 6.11.1
  * @since 6.8.0
  */
 final class Module_BootstrapTheme extends GDO_Module

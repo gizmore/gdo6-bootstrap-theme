@@ -3,9 +3,11 @@
 /** @var $form \GDO\Form\GDT_Form **/
 use GDO\Util\Common;
 $headers = $field->getHeaderFields();
+$_pagemenu = '';
 if ($pagemenu = $field->getPageMenu())
 {
-	echo $pagemenu->render();
+	$_pagemenu = $pagemenu->render();
+	echo $_pagemenu;
 }
 $result = $field->getResult();
 ?>
@@ -77,3 +79,4 @@ $result = $field->getResult();
 <?php endif; ?>
 </div>
 <!-- END of GDT_Table -->
+<?=$_pagemenu?>
