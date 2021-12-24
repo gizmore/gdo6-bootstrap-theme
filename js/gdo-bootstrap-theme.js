@@ -100,11 +100,11 @@ $(function() {
 	// Date
 	let conv = window.GDO.Moment.convertFormat;
 
-//	$('.gdt-datetime input:not([type="datetime-local"])').datetimepicker({
-//		useCurrent: false,
-//		locale: window.GDO_LANGUAGE,
-//		format: conv(window.GDO_TRANS.t('df_long')),
-//	});
+	$('.gdt-datetime input:not([type="datetime-local"])').datetimepicker({
+		useCurrent: false,
+		locale: window.GDO_LANGUAGE,
+		format: conv(window.GDO_TRANS.t('df_long')),
+	});
 	
 	$('.gdt-date input').datetimepicker({
 		useCurrent: false,

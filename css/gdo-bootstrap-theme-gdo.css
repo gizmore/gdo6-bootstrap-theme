@@ -47,6 +47,11 @@ div.gdt-image-button {
 	margin: 2px 8px;
 }
 
+footer .gdt-bar-row > * {
+	margin: 0;
+	padding: 2px;
+}
+
 .gdt-form {
 	padding: 16px;
 	border: solid #f7f7f9;
@@ -180,6 +185,9 @@ main .gdt-bar-row a {
 .gdt-table h3 { border: 1px solid #ddd; padding: 8px 16px; margin-top: 8px; }
 .gdt-table .gdt-button,
 .gdt-table .gdt-iconbutton { padding: 4px; }
+.gdt-table { display: flex; flex-direction: column; }
+.gdt-table > form { flex: 1 1 auto; display: flex; flex-direction: column; }
+.gdt-table > form > table { flex: 1 1 auto; }
 
 /** Forms **/
 .form-group { position: relative; }
@@ -249,3 +257,6 @@ nav#sidebar .sidebar-menu .gdt-link a { color: inherit; }
 
 /** Dialogs **/
 .alert p { margin-bottom: 0; }
+
+/** Dates **/
+.gdt-datetime input { max-width: 152px; }

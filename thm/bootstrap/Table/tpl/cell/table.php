@@ -12,7 +12,7 @@ if ($pagemenu = $field->getPageMenu())
 $result = $field->getResult();
 ?>
 <div
- class="gdt-table table-responsive">
+ class="gdt-table">
 <?php if (!$form) : ?>
 <form method="get" action="<?=$field->href?>" class="b">
 <?php endif; ?>
@@ -23,7 +23,7 @@ $result = $field->getResult();
   <?php if ($field->hasTitle()) : ?>
   <h3><?= $field->renderTitle(); ?></h3>
   <?php endif; ?>
-  <table id="gwfdt-<?= $field->name; ?>" class="table table-striped">
+  <table id="gwfdt-<?= $field->name; ?>" class="table table-responsive table-striped">
 	<thead>
 	  <tr>
 	  <?php foreach($headers as $gdt) : ?>
