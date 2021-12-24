@@ -135,8 +135,11 @@ span.gdo-icon {
 }
 
 main .gdt-bar-row {
-	padding: 10px 0px;
 	border: 1px solid #eee;
+}
+
+main .gdt-bar-row a {
+	padding: 10px 0px;
 }
 
 .gdt-link a {
@@ -175,7 +178,8 @@ main .gdt-bar-row {
 .gdt-tblorder .asc,
 .gdt-tblorder .desc { position: relative; z-index: 100; font-size: 22px; }
 .gdt-table h3 { border: 1px solid #ddd; padding: 8px 16px; margin-top: 8px; }
-.gdt-table .gdt-button { padding: 4px; }
+.gdt-table .gdt-button,
+.gdt-table .gdt-iconbutton { padding: 4px; }
 
 /** Forms **/
 .form-group { position: relative; }

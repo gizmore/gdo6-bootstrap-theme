@@ -23,7 +23,7 @@ $result = $field->getResult();
   <?php if ($field->hasTitle()) : ?>
   <h3><?= $field->renderTitle(); ?></h3>
   <?php endif; ?>
-  <table id="gwfdt-<?= $field->name; ?>" class="table">
+  <table id="gwfdt-<?= $field->name; ?>" class="table table-striped">
 	<thead>
 	  <tr>
 	  <?php foreach($headers as $gdt) : ?>
