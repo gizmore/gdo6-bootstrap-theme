@@ -184,6 +184,7 @@ nav#sidebar .sidebar-menu .gdt-link a { color: inherit; }
 
 /** Dialogs **/
 .alert p { margin-bottom: 0; }
+.modal-dialog pre { white-space: pre-wrap; }
 
 /** Dates **/
 .gdt-datetime input { max-width: 152px; }

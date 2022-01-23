@@ -7,7 +7,7 @@ $(function() {
 		title = title || t('sitename');
 		let modal = `
 <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog error-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">${title}</h5>
@@ -16,7 +16,7 @@ $(function() {
         </button>
       </div>
       <div class="modal-body">
-        <p>${html}</p>
+        <pre>${html}</pre>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">${ok}</button>
