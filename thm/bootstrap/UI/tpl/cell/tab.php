@@ -1,12 +1,9 @@
-<?php
-use GDO\UI\GDT_Tab;
-$field instanceof GDT_Tab;
-?>
+<?phpuse GDO\UI\GDT_Tab;
+/** @var $cell boolean **//** @var $field GDT_Tab **/?> 
 <div class="container">
-  <h5><?=$field->displayLabel()?></h5>
   <div>
 <?php
-foreach ($field->getFields() as $gdt)
+foreach ($field->getFieldsRec() as $gdt)
 {
 	echo $cell ? $gdt->renderCell() : $gdt->renderForm();
 }

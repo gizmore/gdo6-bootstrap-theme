@@ -14,7 +14,7 @@ $result = $field->getResult();
 <div
  class="gdt-table">
 <?php if (!$form) : ?>
-<form method="get" action="<?=$field->href?>" class="b">
+<form method="get" action="<?=html($field->action)?>" class="b">
 <?php endif; ?>
 <?php if (!GDO_SEO_URLS) : ?>
   <input type="hidden" name="mo" value="<?= html(Common::getRequestString('mo','')); ?>" />

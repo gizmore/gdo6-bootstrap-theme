@@ -18,7 +18,7 @@ $id = 'gdt-accordion-'.$field->name.'-'.($n++);
     <div id="<?=$id?>" class="collapse" aria-labelledby="headingOne"
       data-parent="#<?=$id.'-accordion'?>">
       <div class="card-body">
-<?php if ($f = $field->getFields()) foreach ($f as $gdt) : ?>
+<?php if ($f = $field->getFieldsRec()) foreach ($f as $gdt) : ?>
         <?=$gdt->renderCell()?>
 <?php endforeach; ?>
       </div>
